@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- description -->
+    <title>Stopping Asynchronous Misbehavior | Tomas Petr</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link rel="stylesheet" href="../../../css/post.css">
+    <link rel="stylesheet" href="../../apps/3_asynchronous/asynchronous.css">
+    <!-- favicon -->
+    <link rel="icon" href="../../../favicon.ico" type="image/ico" sizes="16x16" />
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!--   
+        ===============
+        Header Sections
+        ===============
+        -->
+        <header class="clearfix">
+            <!-- Top Navigation -->
+            <nav id="nav-main" class="clearfix">
+                <ul id="nav-main-menu">
+                    <li><a href="../../../index.html">home</a></li>
+                    <li><a href="../../../pages/codes.html">codes</a></li>
+                    <li><a href="../../../pages/apps.html">apps</a></li>
+                    <li><a href="../../../pages/faces.html">faces</a></li>
+                </ul>
+            </nav>
+            <!-- Logo -->
+            <a id="brand-logo-frame" class="clearfix" href="../../../index.html">
+                <img src="../../../images/logo.png" alt="logo" id="brand-logo-img" />
+            </a>
+        </header>
+        <!--   
+         ===============
+         Page Intro Sections
+         ===============
+         -->
+        <section id="page-intro">
+            <!-- Page Title -->
+            <div id="intro-title" class="clearfix">
+                <h1>Stopping Asynchronous Misbehavior</h1>
+                <h2>Teach your Code to Be patient</h2>
+            </div>
+    </div>
+    </section>
+
+
+    <!-- 
+===============
+Main Content Sections
+===============
+-->
+
+    <main id="main-content-wrapper">
+        <!-- Page's nav thumbs-->
+        <section id="post">
+            <p>
+                When I was writing the code for my previous code snippet <a
+                    href="../../codes/2_not-cropped-thumbnails/not-cropped.html"><strong>Not Cropped
+                        Thumbnails</strong></a>, everything went well.
+                For the sake of simplicity I hardcoded HTML code for each image, with their src path. I placed my
+                JavaScript at the bottom of my page, just above the body closing tag, making sure the entire content of
+                my page is fully loaded before And then I could do whatever I wanted to do in Javascript, as reading
+                each individual image's natural sizes to be able to determine what CSS properties I should apply to
+                them.
+
+            </p>
+            <p>
+                But in this snippet, I wanted to obtain src for each image is from the source outside of HTML, as from
+                the JSON file. I wanted to do it simple, without any XMLHttpRequest. I stored my JSON objet in local
+                JavaScript <mark>"asynch.js"</mark> file, which is technically only the JSOM object stored in JavaScript
+                text variable <mark>"var imgGal"</mark>. The data exchanged
+                between a
+                browser and a server can be only be a text anyway.
+            </p>
+            <p>I imported this file into my HTML file via <mark>"src="./asynch.json"</mark> tag, which I placed at
+                the at the bottom of my page, just above the body closing tag and JavaScript file handling all the
+                dynamic tasks on the webpage. Then I converted this JSON into JavaScript objects via <mark>var
+                    imgObj = JSON.parse(imgGal);</mark>.
+
+            </p>
+            <p>At this point everything seemed to look so straightforward. I could access each image's src by running
+                through each element of <mark>["images"]</mark> array.,and dynamically create HTML code for its
+                placement on the page.
+                So I eded up with HTML code for all images rendered by JavaScript. Then I needed to let the
+                <mark>stylingFx</mark>
+                function to read each image's natural sizes to determine what kind of CSS to apply on them, either
+                <mark>width: 100%; height: auto;</mark> or <mark>width: auto; height: 100%;</mark>.
+            </p>
+            <p>
+                But it's where my problems started. Since the source for src attributes were created dynamically by
+                JavaScript
+                code, JavaScript started to act in asynchronous manner. It means it didn't wait for all images to be
+                loaded into
+                the page first, and only then to ran my <mark>stylingFx</mark> function. Instead, it run
+                <mark>stylingFx</mark>
+                function before
+                all
+                images were loaded, resulting trying to read the natural image's sizes of non existent images. This
+                asynchronous
+                behavior had to be stopped.
+            </p>
+            <p>I found the solution on <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event">developer.mozilla.org</a>
+                website. Now <mark>stylingFx</mark> function runs only after entire page's content is loaded and
+                everything works as desired.</p>
+            <section id="app">
+
+                <!-- JavaScript generated code comes here -->
+
+            </section>
+            <p>The whole code looks like this:</p>
+            <script src="https://gist.github.com/TomPetr/265fc9fb4ede70f0d7e1fc130ebabbb4.js"></script>
+        </section>
+    </main>
+    <!-- 
+     ===============
+     Footer Sections
+     ===============
+    -->
+    <footer id="footer-section" class="clearfix">
+        <!-- Left Column -->
+        <div id="footer-left">
+            <h2>Contact</h2>
+            <form action="/action_page.php" method="POST" target="_self" name="contact-form" id="contact-form"
+                width="100%" onsubmit="validateFormFx()">
+                <fieldset>
+                    <legend>Hire Me!</legend>
+
+                    <input type="text" name="first-name" id="first-name" placeholder="Your First Name..." class="req" />
+                    <label for="first-name">*</label>
+                    <br /><br />
+                    <input type="text" name="last-name" id="last-name" placeholder="Your Last Name..." class="req" />
+                    <label for="last-name">*</label>
+                    <br /><br />
+                    <input type="email" name="email" id="email" placeholder="Your Email..." class="req" />
+                    <label for="email">*</label>
+                    <br /><br />
+                    <input type="tel" name="phone" id="phone" placeholder="000-000-0000"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="req" />
+                    <label for="phone">*</label>
+                    <br /><br />
+                    <input type="text" name="subject" id="subject" placeholder="Subject..." class="req" />
+                    <label for="subject">*</label>
+                    <br /><br />
+
+                    <textarea name="message" id="message" rows="5" class="req"
+                        placeholder="Write me a message.."></textarea>
+                    <label for="message">*</label>
+
+
+
+                    <fieldset>
+                        <legend>I Prefer To Communicate Via:</legend>
+                        <select name="com" id="com">
+                            <option value="phone-call">Phone Calls</option>
+                            <option value="text-mes">Text Messages</option>
+                            <option value="emails" Emails>Emails</option>
+                            <option value="Skype">Skype</option>
+                            <option value="WatsApp">WhatsApp</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Hangouts">Hangouts</option>
+                            <option value="person" selected>In Person</option>
+                        </select>
+                    </fieldset>
+                    <input type="radio" name="news" id="news" />
+                    <span>Please send me the newsletter by email.</span>
+                    <input type="submit" name="submit" id="submit" value="Submit!" />
+                </fieldset>
+            </form>
+        </div>
+        <!-- Right Column-->
+        <div id="footer-right">
+            <div id="credentials">
+                <h2>My tools</h2>
+                <ul id="footer-tools">
+                    <li>
+                        <a class="" href="#">
+                            <p>PHP</p>
+                            <p><img src="../../../images/php-icon.png" alt="php" /></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>JavaScript</p>
+                            <p><img src="../../../images/js-icon.png" alt="javascript" /></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>MySQL</p>
+                            <p><img src="../../../images/mysql-icon.png" alt="mySql" /></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>BootStrap</p>
+                            <p><img src="../../../images/bootstrap-icon.png" alt="BootStrap" /></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>VS Code</p>
+                            <p>
+                                <img src="../../../images/vcode-icon.png" alt="Visual Studio Code" />
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>GitHub</p>
+                            <p><img src="../../../images/git_hub-icon.png" alt="GitHub" /></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>AffinityPhoto</p>
+                            <p>
+                                <img src="../../../images/affinity_photo-icon.png" alt="AffinityPhoto" />
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>AffinityDesigner</p>
+                            <p>
+                                <img src="../../../images/affinity_designer-icon.png" alt="AffinityDesigner" />
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="copyright">Copyright © <span id="year"></span> Tomas Petr</div>
+        </div>
+    </footer>
+    </div>
+    <script src="../../../scripts/main.js"></script>
+    <script src="./asynch.js"></script>
+    <script src="./asynchronous.js" type="text/javascript"></script>
+</body>
+
+</html>

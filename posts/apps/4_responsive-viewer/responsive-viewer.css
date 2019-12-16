@@ -1,0 +1,31 @@
+#app>figure {
+    flex: 0 0 98%;
+    text-align: center;
+
+    margin-bottom: 1rem;
+    border: 1px solid aliceblue;
+    padding: 0.3rem;
+}
+
+#app>figure>img {
+    height: auto;
+    /* max-width: 80%; */
+    width: 100%;
+}
+
+#app>article {
+    border: 1px solid aliceblue;
+    margin-bottom: 1rem;
+    flex: 0 0 150px;
+    max-width: 150px;
+    height: 150px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 150px;
+}
+
+#app>article>img {
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
+}

@@ -1,0 +1,107 @@
+/*  Face Pace's Main Section  */
+.face-posts-wrapper {
+
+    width: 90%;
+    margin: 0 auto 1% auto;
+}
+
+
+.face-post {
+    margin-bottom: 1.5rem;
+    background-color: #fafbef;
+}
+
+.face-post a:link {
+    text-decoration: none;
+
+}
+
+.face-post a:visited {
+    color: #000;
+}
+
+.face-post a:hover figure img {
+    border: 3px solid #6388b7;
+}
+
+.face-post a:hover h2 {
+    background-color: #1e3452;
+    color: #6388b7;
+}
+
+.face-description {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+}
+
+.face-description h2 {
+
+    padding: 2%;
+    background-color: #6388b7;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+    color: #1e3452;
+    text-align: center;
+
+
+}
+
+
+
+.face-description figure {
+    width: 100%;
+}
+
+
+
+.face-description p {
+    text-align: justify;
+    font-size: 110%;
+    font-weight: 900;
+    display: inline-block;
+
+
+}
+
+.face-description figure img {
+    width: 100%;
+    height: auto;
+
+    border: 3px solid #000;
+}
+
+/* Media Queries */
+@media all and (min-width:768px) {
+    .face-description h2 {
+
+        width: 90%;
+        font-size: 2em;
+        text-align: right;
+        padding-left: 1rem;
+        margin-left: -4%;
+    }
+
+    .face-description figure {
+        float: left;
+        width: 48%;
+    }
+
+    .face-description p {
+        width: 50%;
+        padding-left: 1rem;
+    }
+}
+
+@media all and (min-width:992px) {
+
+
+    .face-description h2 {
+        width: 50%;
+        float: right;
+        margin-right: -2.5%;
+        text-align: center;
+    }
+
+
+}

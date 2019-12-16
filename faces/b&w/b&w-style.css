@@ -1,0 +1,519 @@
+/* font-family: 'Share Tech Mono', monospace;- body
+font-family: 'BioRhyme Expanded', serif;- brand-title
+*/
+:root {
+
+    --medium-grey: #999999;
+    --white-color: #fff;
+    --absolut-black: #000;
+
+}
+
+/*  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* getting rid of gap under the img */
+.no-gap {
+    font-size: 0;
+}
+
+
+
+/* body */
+body {
+    margin: 0;
+    padding: 1%;
+    background-color: var(--white-color);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 120%;
+    line-height: 1.6875;
+    color: var(--absolut-black);
+}
+
+#page-wrapper {
+    padding: 0 5% 5% 5%;
+    width: 100%;
+    max-width: 100%;
+}
+
+/*     ===============
+        Header Sections
+        =============== */
+
+header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/*  Top navigation */
+
+#nav-main {
+    flex-basis: 55%;
+    position: relative;
+    z-index: 2;
+
+}
+
+#brand-logo-frame {
+    flex-basis: 100%;
+    order: 3;
+    padding: 1rem;
+    border: 3px solid black;
+
+}
+
+#brand-face-frame {
+    flex-basis: 30%;
+
+}
+
+#nav-main ul {
+    border: 2px solid black;
+    max-width: 100%;
+
+
+}
+
+#nav-main-menu li {
+    list-style: none;
+    text-transform: uppercase;
+
+}
+
+#nav-main-menu li.active {
+
+    text-align: center;
+}
+
+#nav-main-menu li:nth-child(even) {
+    background-color: var(--absolut-black);
+    color: antiquewhite;
+}
+
+#nav-main-menu li:nth-child(odd) {
+    background-color: var(--white-color);
+    color: var(--absolut-black);
+}
+
+#nav-main-menu li a {
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 1rem 0 1rem 1rem;
+}
+
+#nav-main-menu li:nth-child(even) a {
+
+    color: var(--white-color);
+}
+
+#nav-main-menu li:nth-child(odd) a {
+
+    color: var(--absolut-black);
+}
+
+
+
+#nav-main-menu li:hover:not(.active) {
+
+    letter-spacing: 1rem;
+    ;
+}
+
+
+
+#brand-logo-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+#brand-face-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 10px double var(--absolut-black);
+    z-index: -1;
+    position: relative;
+    top: 0;
+}
+
+.filtered {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/*      ===============
+         Page Intro Sections
+         =============== */
+#page-intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+
+
+
+
+}
+
+#intro-title {
+    background-color: black;
+    width: 70%;
+    color: aliceblue;
+    align-self: flex-end;
+    padding: 1rem;
+    position: relative;
+    top: -2rem;
+    right: 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#intro-content {
+    border-top: 3px solid var(--medium-grey);
+    border-right: 3px solid var(--medium-grey);
+    padding: 6px 2px 0 0;
+}
+
+#intro-content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    width: 70%;
+
+
+}
+
+#intro-content p:nth-child(odd) {
+    float: right;
+    margin-right: 5px;
+}
+
+#intro-content p:nth-child(even) {
+    float: left;
+}
+
+
+#brand-title h1 {
+    font-family: 'BioRhyme Expanded', serif;
+}
+
+/*      ===============
+        Main Content Sections
+        =============== */
+#main-section {
+    padding: 2%;
+    border-left: 3px solid var(--medium-grey);
+    border-bottom: 3px solid var(--medium-grey);
+    margin-bottom: 2px;
+}
+
+#columns-3-frame {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+
+#columns-3-frame a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+    width: 100%;
+}
+
+
+#columns-3-frame a:hover h2 {
+    letter-spacing: .5rem;
+}
+
+#columns-3-frame a:hover a {
+    width: 35%;
+}
+
+#columns-3-frame h2:nth-child(odd) {
+    margin-right: 5px;
+    text-align: right;
+
+}
+
+#columns-3-frame h2:nth-child(even) {
+    margin-left: 5px;
+}
+
+#columns-3-frame a h2 {
+    flex-basis: 50%;
+}
+
+#columns-3-frame a figure {
+    flex-basis: 50%;
+
+}
+
+#columns-3-frame a figure img {
+    border: 3px solid var(--absolut-black);
+    width: 100%;
+    height: auto;
+
+
+}
+
+#columns-3-frame figure {
+    padding: 5px;
+
+}
+
+#columns-3-frame .nav-button:nth-child(1) figure {
+    border-top: 2px solid var(--absolut-black);
+    border-left: 2px solid var(--absolut-black);
+}
+
+#columns-3-frame .nav-button:nth-child(2) figure {
+    border-top: 2px solid var(--absolut-black);
+    border-right: 2px solid var(--absolut-black);
+}
+
+#columns-3-frame .nav-button:nth-child(3) figure {
+    border-bottom: 2px solid var(--absolut-black);
+    border-right: 2px solid var(--absolut-black);
+}
+
+/*     ===============
+        Footer Sections
+        =============== */
+footer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#footer-left,
+#footer-right {
+    flex: 1 0 100%;
+}
+
+#footer-left h2,
+#footer-right h2 {
+    text-align: center;
+}
+
+#copyright {
+    position: relative;
+    bottom: -2rem;
+    text-align: center;
+    font-size: smaller;
+}
+
+#footer-left {
+    padding-right: 5px;
+}
+
+
+
+
+/* Contact form */
+fieldset {
+    padding: 5px;
+
+}
+
+#submit {
+    background-color: black;
+    color: #b3b0b0;
+    width: 30% !important;
+    height: 30px;
+    font-size: 1.3rem;
+    border-radius: 15px;
+    margin: auto;
+    display: block;
+}
+
+input:not(#news) {
+    width: 50%;
+    font-size: 1.3rem;
+
+}
+
+textarea {
+    width: 90%;
+    font-size: 1.3rem;
+}
+
+#credentials ul {
+    list-style: none;
+}
+
+/* Credentials */
+#footer-tools li a img {
+    width: 64px;
+    height: auto;
+
+}
+
+#footer-tools a:link {
+    text-decoration: none;
+    color: var(--absolut-black)
+}
+
+#footer-tools a:visited {
+    text-decoration: none;
+    color: var(--medium-grey);
+}
+
+#footer-tools a:hover {
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+
+}
+
+#footer-tools a:active {
+    text-decoration: none;
+}
+
+#footer-tools {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer-tools li {
+    flex: 1 1 50%;
+    text-align: center;
+}
+
+#footer-right {
+    border-bottom: 2px solid var(--medium-grey);
+
+}
+
+/*     ===============
+        Media Queries
+        ===============   */
+@media all and (min-width:576px) {
+    #nav-main {
+        flex-basis: 40%;
+    }
+}
+
+@media all and (min-width:768px) {
+
+    #nav-main {
+        flex-basis: 25%;
+    }
+}
+
+@media all and (min-width: 992px) {
+
+    /* Header Section */
+    header {
+        flex-direction: row-reverse;
+    }
+
+    #brand-face-frame {
+        flex-basis: 25%;
+        order: 1
+    }
+
+    #brand-logo-frame {
+        flex-basis: 75%;
+        order: 2;
+        text-align: right;
+        position: relative;
+        right: 5rem;
+        top: -3rem;
+    }
+
+    #nav-main {
+        order: 2;
+    }
+
+    #brand-logo-img {
+        width: 45%;
+        max-width: 40%;
+        margin-right: 4rem;
+    }
+
+    /* Intro Sction */
+    #intro-title {
+        top: -5rem;
+        text-align: left;
+        font-size: 1rem;
+
+    }
+
+    #intro-title h1 {
+        font-family: 'BioRhyme Expanded', serif;
+    }
+
+    /* Main Section */
+    #columns-3-frame a {
+        justify-content: center;
+        width: 50%;
+
+
+    }
+
+    #columns-3-frame a h2 {
+        flex-basis: 20%;
+    }
+
+    #columns-3-frame a figure {
+        flex-basis: 30%;
+
+    }
+
+    #footer-left,
+    #footer-right {
+        flex: 1;
+    }
+
+    #footer-right {
+        position: relative;
+    }
+
+    #copyright {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+}

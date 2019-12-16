@@ -1,0 +1,16 @@
+#app {
+
+    color: black !important;
+}
+
+
+#my-form {
+    background-color: #fafbef;
+    padding: 15px;
+    margin-bottom: 1rem;
+}
+
+#my-form fieldset {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}

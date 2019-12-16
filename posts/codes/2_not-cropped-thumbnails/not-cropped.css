@@ -1,0 +1,41 @@
+#app>article {
+    border: 1px solid aliceblue;
+    margin-bottom: 1rem;
+    flex: 0 0 150px;
+    max-width: 150px;
+    height: 150px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 150px;
+    position: relative;
+    top: 0;
+}
+
+#app>article>img {
+    height: 250px;
+    width: auto;
+
+}
+
+#app>article>span {
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    font-size: 1.5rem;
+    z-index: 1;
+    text-shadow: -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+
+}
+
+#app>article>img.not-crop {
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
+}
+
+#app>hr {
+    flex: 0 0 90%;
+}

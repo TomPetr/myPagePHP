@@ -1,0 +1,517 @@
+/* for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* getting rid of mysterious gap under the image */
+.no-gap {
+    font-size: 0;
+}
+
+/* float clearing */
+.clearfix:before {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+/* body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3b3a3a;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1.6875;
+}
+
+/* header section */
+header {
+    position: relative;
+}
+
+
+
+/* top nav */
+#nav-main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #1e3452;
+}
+
+#nav-main ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: inherit;
+}
+
+#nav-main-menu li {
+    float: left;
+    width: 25%;
+    height: inherit;
+    text-align: center;
+    border-right: 1px solid #000;
+}
+
+#nav-main-menu li:last-child {
+    border-right: none;
+}
+
+#nav-main-menu li a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    line-height: 40px;
+    color: aliceblue;
+}
+
+.active {
+    background-color: #135e8d;
+}
+
+#brand-face-frame {
+
+    display: none;
+}
+
+
+
+#brand-logo-frame {
+
+    width: 45%;
+    max-width: 45%;
+
+    float: left;
+    display: block;
+    background-color: #131313;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: relative;
+    top: 0;
+    z-index: 2;
+
+
+}
+
+#brand-logo-frame a {
+    width: inherit;
+
+}
+
+#brand-logo-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* intro section */
+#page-intro {
+    background-color: #fafbef;
+    width: 90%;
+    margin: 0 auto 1rem auto;
+    padding-bottom: 1rem;
+}
+
+
+
+
+#intro-title {
+    color: #135e8d;
+    padding: 1rem 1rem 0.5rem 0.5rem;
+    width: 90%;
+    font-size: 0.8rem;
+    position: relative;
+    top: -1.5rem;
+    right: -12%;
+    z-index: 1;
+    background-color: #bac2d4;
+}
+
+#intro-title h1 {
+    text-align: center;
+}
+
+#intro-content {
+    width: 100%;
+}
+
+#intro-content>p {
+    background-color: #63a7d2;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 0.5rem;
+    text-align: justify;
+    width: 106%;
+    margin-left: -0.55rem;
+}
+
+/* main section */
+#main-content-wrapper {
+    background-color: #fafbef;
+    width: 90%;
+    margin: 0 auto 0.5rem auto;
+}
+
+#main-section {
+    margin: 0 5% 0 5%;
+}
+
+#columns-3-frame {
+    border: 1rem solid #fafbef;
+
+}
+
+#columns-3-frame>a:not(:last-of-type) {
+    margin-bottom: 1rem;
+}
+
+.column-button {
+    text-decoration: none;
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 3px solid #1e3452;
+
+}
+
+
+
+.column-background {
+    background-image: url("../images/column-background.png");
+}
+
+
+
+.column-button h2 {
+    font-weight: bolder;
+    font-size: 1.6rem;
+    padding: 2%;
+    background-color: #6388b7;
+    text-transform: uppercase;
+
+    color: #1e3452;
+    text-align: center;
+
+
+
+}
+
+
+
+.column-img {
+    width: 100%;
+    height: auto;
+}
+
+/* footer section */
+#footer-section {
+    padding-bottom: 10px;
+    margin: 0 5% 0 5%;
+    position: relative;
+    top: 0;
+}
+
+#message {
+    width: 90%;
+    max-width: 90%;
+}
+
+
+
+footer h2 {
+    color: aliceblue;
+    text-align: center;
+}
+
+#contact-form {
+    background-color: #fafbef;
+    padding: 15px;
+}
+
+label {
+    color: #d50505;
+    vertical-align: top;
+}
+
+#contact-form fieldset {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid black;
+    background-color: inherit;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+}
+
+textarea {
+    padding-left: 0.5rem;
+
+}
+
+
+
+.req-field {
+    border-bottom: 2px solid #d50505 !important;
+}
+
+textarea.req-field {
+    border: 2px solid #d50505 !important;
+}
+
+
+
+#footer-tools {
+    width: 100%;
+    margin: auto;
+
+    list-style-type: none;
+}
+
+#footer-tools>li {
+    width: 50%;
+    display: block;
+    float: left;
+    margin-bottom: 1rem;
+}
+
+#footer-tools a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 130%;
+    text-align: center;
+}
+
+#footer-tools img {
+    width: 64px;
+    height: auto;
+}
+
+#copyright {
+
+    color: aliceblue;
+    text-align: center;
+}
+
+/* Media Quries */
+@media all and (min-width:576px) {
+    #intro-title h1 {
+        text-align: right;
+    }
+
+    #intro-content>p {
+        width: 100%;
+    }
+
+    #intro-content>p:nth-of-type(odd) {
+        margin-left: -1rem;
+
+    }
+
+    #intro-content>p:nth-of-type(even) {
+        margin-right: -1rem;
+        float: right;
+
+    }
+
+    .column-button {
+        padding: 1%;
+        text-align: center;
+        background-color: #3a3a3a;
+    }
+
+    /* h2 & figure - sizing & positioning horizontally */
+    .column-button h2 {
+        min-width: 39%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .column-button figure {
+        width: 50%;
+        position: relative;
+        z-index: 1;
+    }
+
+
+    #columns-3-frame .column-button:nth-of-type(odd) h2 {
+        left: 10%;
+    }
+
+    #columns-3-frame .column-button:nth-of-type(odd) figure {
+        left: -10%;
+    }
+
+    #columns-3-frame .column-button:nth-of-type(even) h2 {
+        left: -10%;
+    }
+
+    #columns-3-frame .column-button:nth-of-type(even) figure {
+        left: 10%;
+    }
+
+    /* https://stackoverflow.com/questions/2743989/how-to-vertically-center-divs */
+
+    /* centering h2 & figure vertically */
+
+    .column-button:before,
+    .column-button h2,
+    .column-button figure {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .column-button:before {
+        content: " ";
+        height: 100%;
+    }
+}
+
+@media all and (min-width:768px) {
+    #nav-main-menu li a {
+        font-size: 1.5rem;
+    }
+
+    #intro-title {
+        font-size: 1rem;
+    }
+
+
+    #intro-content>p:nth-of-type(even) {
+        margin-left: -1rem;
+        float: right;
+    }
+
+    .column-button:before,
+    .column-button h2,
+    .column-button figure {
+        display: block;
+
+    }
+
+
+
+    .column-button h2 {
+        width: 100%;
+        position: static;
+
+    }
+
+    .column-button figure {
+        width: 100%;
+        position: static;
+
+    }
+
+    .column-button {
+        float: left;
+        width: 32%;
+        padding: 1% 0.5% 1% 0.5%;
+        position: static;
+
+    }
+
+    .column-button h2 {
+        margin-bottom: 2%;
+
+        width: 100%;
+    }
+
+    #columns-3-frame>a:not(:last-of-type) {
+        margin-bottom: 0;
+        margin-right: 2%;
+    }
+
+    #columns-3-frame>a:nth-of-type(odd) h2 {
+        margin-bottom: 1rem;
+    }
+
+    #columns-3-frame>a:nth-of-type(even) h2 {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    #brand-face-frame {
+        width: 20%;
+        float: right;
+        bottom: -6rem;
+        display: block;
+        margin-right: 4%;
+    }
+
+    #brand-face-img {
+
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+@media all and (min-width:992px) {
+    #nav-main-menu li a {
+        font-size: 2.15rem;
+    }
+
+
+
+
+    #intro-content>p:nth-of-type(odd) {
+
+        margin-right: -1.5rem;
+    }
+
+    #intro-content>p:nth-of-type(even) {
+        margin-left: -1.5rem;
+        float: right;
+    }
+
+    #footer-left {
+        float: left;
+        width: 50%;
+    }
+
+    #footer-right {
+        float: right;
+        width: 50%;
+    }
+
+    #contact-form {
+        margin-top: 1rem;
+    }
+
+
+
+    #copyright {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    #intro-title {
+        font-size: 1.2rem;
+
+    }
+}

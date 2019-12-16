@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- description -->
+    <title>Forming the Form | Tomas Petr</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../../../css/style.css" />
+    <link rel="stylesheet" href="../../../css/post.css">
+    <link rel="stylesheet" href="./form-validate.css">
+    <!-- favicon -->
+    <link rel="icon" href="../../../favicon.ico" type="image/ico" sizes="16x16" />
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!--   
+        ===============
+        Header Sections
+        ===============
+        -->
+        <header class="clearfix">
+            <!-- Top Navigation -->
+            <nav id="nav-main" class="clearfix">
+                <ul id="nav-main-menu">
+                    <li><a href="../../../index.html">home</a></li>
+                    <li><a href="../../../pages/codes.html">codes</a></li>
+                    <li><a href="../../../pages/apps.html">apps</a></li>
+                    <li><a href="../../../pages/faces.html">faces</a></li>
+                </ul>
+            </nav>
+            <!-- Logo -->
+            <a id="brand-logo-frame" class="clearfix" href="../../../index.html">
+                <img src="../../../images/logo.png" alt="logo" id="brand-logo-img" />
+            </a>
+        </header>
+        <!--   
+         ===============
+         Page Intro Sections
+         ===============
+         -->
+        <section id="page-intro">
+            <!-- Page Title -->
+            <div id="intro-title" class="clearfix">
+                <h1>Give some Form to this Form</h1>
+                <h2>Basic Contact Form Validation</h2>
+            </div>
+    </div>
+    </section>
+
+
+    <!-- 
+===============
+Main Content Sections
+===============
+-->
+
+    <main id="main-content-wrapper">
+        <!-- Page's nav thumbs-->
+        <section id="post">
+            <p>
+                I decided to design my demo Contact Form in the minimalistic way. The simple UI, but functioning. I left
+                aside the labels telling the user what to fill in, instead I let the visual design to navigate them
+                through. So
+                here is the Contact Form:
+            </p>
+
+            <section id="app">
+
+                <form action="/action_page.php" method="POST" target="_self" name="my-form" id="my-form" width="100%"
+                    onsubmit="validateFormFx(event)">
+                    <fieldset>
+                        <legend>Hire Me!</legend>
+
+                        <input type="text" name="first-name" id="first-name" placeholder="Your First Name..."
+                            class="req imp-el" />
+                        <label for="first-name">*</label>
+                        <br /><br />
+                        <input type="text" name="last-name" id="last-name" placeholder="Your Last Name..."
+                            class="req" />
+                        <label for="last-name">*</label>
+                        <br /><br />
+                        <input type="email" name="email" id="email" placeholder="Your Email..." class="req imp-el" />
+                        <label for="email">*</label>
+                        <br /><br />
+                        <input type="tel" name="phone" id="phone" placeholder="000-000-0000"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="req" />
+                        <label for="phone">*</label>
+                        <br /><br />
+                        <input type="text" name="subject" id="subject" placeholder="Subject..." class="req" />
+                        <label for="subject">*</label>
+                        <br /><br />
+
+                        <textarea name="message" id="message" rows="5" class="req"
+                            placeholder="Write me a message.."></textarea>
+                        <label for="message">*</label>
+
+
+
+                        <fieldset>
+                            <legend>I Prefer To Communicate Via:</legend>
+                            <select name="com" id="com">
+                                <option value="phone-call">Phone Calls</option>
+                                <option value="text-mes">Text Messages</option>
+                                <option value="emails" Emails>Emails</option>
+                                <option value="Skype">Skype</option>
+                                <option value="WatsApp">WhatsApp</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Hangouts">Hangouts</option>
+                                <option value="person" selected>In Person</option>
+                            </select>
+                        </fieldset>
+                        <input type="radio" name="news" id="news" />
+                        <span>Please send me the newsletter by email.</span>
+                        <input type="submit" name="submit" id="submit" value="Submit!" />
+                    </fieldset>
+                </form>
+
+
+            </section>
+            <p>The task is to validate the form, if all required input fields we filled in, before it is submited to the
+                server. It's achieved in two steps, represented by two groups of code: <br />
+                1) grabbing all form's input elements which are rquired to be filled in (not all input fields are
+                required). <br />
+                2) upon submiting the form, a function validates the form if all required fields are filled in plus
+                handles the CSS decoration depending on fields's status, if they are filled in or not.</p>
+            <p>Looking at the first group of code, it starts with declaring a variable <mark>allElements</mark>
+                which holds the collection of all form's elements. Since not all elements are either input or
+                required elements, I needed to filter out any element which isn't required to be filled in by an
+                user. I used JavaScript Array <mark>filter()</mark> method to do so. But before I could do it,
+                <mark>allElements</mark>
+                collection had to be converted into an array since <mark>filter()</mark> method works only
+                on arrays,
+                not on
+                <mark>HTMLFormControlsCollection</mark>. Now all form's elements are stored in <mark>allElArray</mark>
+                array
+                variable.
+                Let's see what kind of data this array contains:
+            </p>
+            <article class="snippet">
+                <img src="./snippets/allElArray.png" alt="">
+            </article>
+
+            <p>What we can see here is an object array with 11 objects in it. Each object represents an element of
+                <mark>my-form</mark> contact form. The elements, to witch I gave the CSS <mark>class="req"</mark> in my
+                HTML, are
+                these ones what
+                are required to be filled in. Having a closer look at one of them, we can see what kind of information
+                such
+                element object contains:
+            </p>
+            <article class="snippet">
+                <img src="./snippets/req.png" alt="">
+            </article>
+            <p>This object hold a lot of information. The one which will help to identify the required input field is
+                sitting at the bottom of code snipped above, the <mark>classList</mark> property. It's the collection
+                of all CSS
+                classes associated with this HTML element.</p>
+            <p>Now knowing all of it, with the help of Array <mark>filter()</mark> method, I could obtain new array,
+                <mark>reqElements</mark>,
+                which contains only these form's input fields which are required to be filled in.
+            </p>
+            <article class="snippet">
+                <script src="https://gist.github.com/TomPetr/c5fdb998966bc3620553ceb59c8e3e23.js"></script>
+            </article>
+            <p>Inside of <mark>filter()</mark> method, each object element of <mark>allElArray</mark> array, is tested
+                for presence
+                of <mark>req</mark> CSS
+                class. This can be accessed via <mark>reqEl["classList"]</mark> where <mark>reqEl</mark> represents an
+                indidual input field object. If a <mark>req</mark> class is presented, the tested element is added to an
+                array <mark>reqElements</mark> which is now only holding
+                required
+                input fields. The code
+                knows at this point what
+                input fields needs to be validated for user input.
+                <p>It will be handled by the
+                    <mark>validateFormFx()</mark> function:</p>
+
+                <article class="snippet">
+                    <script src=" https://gist.github.com/TomPetr/b1eb251943eb34fdd00c8d208ef1f179.js"> </script>
+                </article>
+                <p>It's code is simple. If an input's field was left empty, when <mark>(el['value'] == "")</mark> is
+                    true,
+                    the specific
+                    set of CSS
+                    decoration will be applied to such HTML element and the element's label. And also, the page will be
+                    prevented from being reloaded (the user doesn't lose all already filled information), and prevented
+                    from being submitted.
+                    In the case all required input fields are filled in, the form is submited to a server.
+                </p>
+
+
+                <p>The whole JavaScript code looks like this:</p>
+                <article class="snippet">
+                    <script src="https://gist.github.com/TomPetr/23a2fbee887b9281a92d38490358e473.js"></script>
+                </article>
+
+        </section>
+    </main>
+    <!-- 
+     ===============
+     Footer Sections
+     ===============
+    -->
+    <footer id="footer-section" class="clearfix">
+        <!-- Left Column -->
+        <div id="footer-left">
+            <h2>Contact</h2>
+            <form action="/action_page.php" method="POST" target="_self" name="contact-form" id="contact-form"
+                width="100%" onsubmit="validateFormFx(event)">
+                <fieldset>
+                    <legend>Hire Me!</legend>
+
+                    <input type="text" name="first-name" id="first-name" placeholder="Your First Name..." class="req" />
+                    <label for="first-name">*</label>
+                    <br /><br />
+                    <input type="text" name="last-name" id="last-name" placeholder="Your Last Name..." class="req" />
+                    <label for="last-name">*</label>
+                    <br /><br />
+                    <input type="email" name="email" id="email" placeholder="Your Email..." class="req" />
+                    <label for="email">*</label>
+                    <br /><br />
+                    <input type="tel" name="phone" id="phone" placeholder="000-000-0000"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="req" />
+                    <label for="phone">*</label>
+                    <br /><br />
+                    <input type="text" name="subject" id="subject" placeholder="Subject..." class="req" />
+                    <label for="subject">*</label>
+                    <br /><br />
+
+                    <textarea name="message" id="message" rows="5" class="req"
+                        placeholder="Write me a message.."></textarea>
+                    <label for="message">*</label>
+
+
+
+                    <fieldset>
+                        <legend>I Prefer To Communicate Via:</legend>
+                        <select name="com" id="com">
+                            <option value="phone-call">Phone Calls</option>
+                            <option value="text-mes">Text Messages</option>
+                            <option value="emails" Emails>Emails</option>
+                            <option value="Skype">Skype</option>
+                            <option value="WatsApp">WhatsApp</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Hangouts">Hangouts</option>
+                            <option value="person" selected>In Person</option>
+                        </select>
+                    </fieldset>
+                    <input type="radio" name="news" id="news" />
+                    <span>Please send me the newsletter by email.</span>
+                    <input type="submit" name="submit" id="submit" value="Submit!" />
+                </fieldset>
+            </form>
+        </div>
+        <!-- Right Column-->
+        <div id="footer-right">
+            <div id="credentials">
+                <h2>My tools</h2>
+                <ul id="footer-tools">
+                    <li>
+                        <a class="" href="#">
+                            <p>PHP</p>
+                            <p><img src="../../../images/php-icon.png" alt="php" /></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>JavaScript</p>
+                            <p><img src="../../../images/js-icon.png" alt="javascript" /></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>MySQL</p>
+                            <p><img src="../../../images/mysql-icon.png" alt="mySql" /></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>BootStrap</p>
+                            <p><img src="../../../images/bootstrap-icon.png" alt="BootStrap" /></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>VS Code</p>
+                            <p>
+                                <img src="../../../images/vcode-icon.png" alt="Visual Studio Code" />
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>GitHub</p>
+                            <p><img src="../../../images/git_hub-icon.png" alt="GitHub" /></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>AffinityPhoto</p>
+                            <p>
+                                <img src="../../../images/affinity_photo-icon.png" alt="AffinityPhoto" />
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>AffinityDesigner</p>
+                            <p>
+                                <img src="../../../images/affinity_designer-icon.png" alt="AffinityDesigner" />
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="copyright">Copyright © <span id="year"></span> Tomas Petr</div>
+            <!-- </div> -->
+    </footer>
+    </div>
+    <script src="../../../scripts/main.js"></script>
+    <!-- <script src="./form-valid.js"></script> -->
+
+</body>
+
+</html>

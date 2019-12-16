@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0.5%;
+    background-color: #313631;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1;
+
+}
+
+#hero {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+}
+
+#logo-front {
+    width: 90%;
+}
+
+#nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+#bars {
+    font-size: 10rem;
+    color: aliceblue;
+    flex: 0 1 25%;
+    text-align: center;
+}
+
+#menu {
+    display: block;
+    max-width: 90%;
+    flex: 0 1 auto;
+}
+
+#menu>a {
+    display: block;
+    margin: auto;
+}
+
+#menu>a>img {
+    width: 100%;
+    border: 1px solid aliceblue;
+}
+
+#hero>p {
+    font-size: 1.5rem;
+    color: aliceblue;
+    font-family: 'Raleway Dots',
+        cursive;
+    text-transform: uppercase;
+}
+
+/* Media Quries */
+@media all and (min-width:576px) {
+    #menu {
+        max-width: 80%;
+    }
+
+    #hero>p {
+        font-size: 3rem;
+    }
+}
+
+@media all and (min-width:768px) {
+    #hero>p {
+        font-size: 4rem;
+    }
+
+
+}
+
+@media all and (min-width:912px) {
+    #logo-front {
+        width: 80%;
+    }
+
+    #hero {
+        align-items: center;
+        width: 80%;
+    }
+
+    #hero>p {
+        font-size: 4.5rem;
+    }
+
+    #nav {
+        flex-flow: row wrap;
+        width: 80%;
+    }
+
+    #bars {
+        flex: 0 1 25%;
+        text-align: left;
+
+    }
+
+    #menu {
+        flex: 0 1 75%;
+        text-align: right;
+    }
+
+    #menu>a {
+        display: inline-block;
+        width: 30%;
+    }
+
+    #menu>a>img {
+        width: 100%;
+    }
+}

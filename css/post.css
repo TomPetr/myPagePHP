@@ -1,0 +1,108 @@
+#app {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    background-color: #385974;
+    color: aliceblue;
+}
+
+#app::before,
+#app::after {
+    display: table;
+    content: " ";
+    height: 0.5rem;
+    width: 100%;
+    background-color: #3A3A3A;
+    padding: 0;
+}
+
+#app>h1 {
+    flex: 0 0 100%;
+    text-align: center;
+
+}
+
+#app>article {
+    border: 1px solid aliceblue;
+    flex: 0 0 100%;
+    margin-bottom: 0.5rem;
+}
+
+#app>article>h3 {
+    text-align: center;
+}
+
+#app>article>p {
+    padding: 0.5rem;
+
+}
+
+#post>p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 0.5rem;
+    text-align: justify;
+}
+
+
+
+#intro-title>h2 {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+mark {
+    background-color: #385974;
+    color: aliceblue;
+    font-style: italic;
+    padding: 0 0.5rem 0 0.5rem;
+    white-space: nowrap;
+}
+
+#post>.snippet {
+    text-align: center;
+    font-size: 0;
+}
+
+#post>.snippet>img {
+    width: 97%;
+    height: auto;
+    margin: 0.3rem 0;
+}
+
+#post>.snippet::before,
+#post>.snippet::after {
+    display: table;
+    content: " ";
+    height: 0.5rem;
+    width: 100.1%;
+    background-color: #3A3A3A;
+    padding: 0;
+}
+
+@media all and (min-width:576px) {
+    #post>.snippet>img {
+        width: 75%;
+
+    }
+}
+
+@media all and (min-width:768px) {
+    #post>.snippet>img {
+        width: 50%;
+
+    }
+}
+
+@media all and (min-width:992px) {
+    #post>.snippet>img {
+        width: 25%;
+
+    }
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- description -->
+    <title>Web Apps | Tomas Petr</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/posts-page.css" />
+    <link rel="icon" href="../favicon.ico" type="image/ico" sizes="16x16" />
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!--   
+        ===============
+        Header Sections
+        ===============
+        -->
+        <header class="clearfix">
+            <!-- Top Navigation -->
+
+
+            <nav id="nav-main" class="clearfix">
+                <ul id="nav-main-menu">
+                    <li><a href="../faces/funky/index.html">home</a></li>
+                    <li><a href="../pages/codes.html">codes</a></li>
+                    <li><a class="active" href="../pages/apps.html">apps</a></li>
+                    <li><a href="../pages/faces.html">faces</a></li>
+                </ul>
+            </nav>
+            <!-- Logo -->
+            <a id="brand-logo-frame" class="clearfix" href="../index.html">
+                <img src="../images/logo.png" alt="logo" id="brand-logo-img" />
+            </a>
+            <!-- Brand img -->
+            <div id="brand-face-frame">
+                <img src="../images/apps_brand.jpg" id="brand-face-img" alt="My Photo" />
+            </div>
+        </header>
+        <!--   
+         ===============
+         Page Intro Sections
+         ===============
+         -->
+        <section id="page-intro">
+            <!-- Page Title -->
+            <div id="intro-title" class="clearfix">
+                <h1>Live for Code. Code for Life: Examples</h1>
+            </div>
+            <!-- intro paragraphs -->
+            <div id="intro-content" class="clearfix">
+                <!-- intro paragraph #1 -->
+                <p>
+                    The most appealing part of web development is the fact that it is created for people by people,
+                    therefore teamwork and listening to user feedback is crucial. This human aspect allows me to
+                    interact with many individuals, which I enjoy.
+                </p>
+                <!-- intro paragraph #2 -->
+                <p>
+                    This page will show my micro web apps. This apps are creatd using techniques and
+                    code snippets I described on my previous Codes page. I found web apps development very interesting
+                    because it lets me to transform my knowledge and skills into something useful.
+                </p>
+            </div>
+        </section>
+
+        <!-- 
+===============
+Main Content Sections
+===============
+-->
+
+        <main>
+
+            <section id="posts" class="clearfix">
+
+                <article class="codes-post">
+                    <a href="../posts/apps/3_asynchronous/asynchronous.html">
+                        <h2>Stopping Asynchronous Misbehavior </h2>
+                        <p>If I want to display a few images on my webpage I can hardcode each image's position in HTML
+                            and then hardcode the source of each picture. But what about if I want to display entire
+                            image gallery? In that case, that case, I pulled src for each image from JSON file. And it's
+                            when JavaScript becomes the loose cannon, it's when it becomes Asynchronous. </p>
+                        <div class="post-info" class="clearfix"><img src="../images/js-icon.png" alt="javascript"
+                                class="no-gap">
+                            <span>November 28, 2019</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="codes-post clearfix">
+                    <a href="../posts/apps/4_responsive-viewer/responsive-viewer.html">
+                        <h2>Responsive Image Viewer</h2>
+                        <p>This snippet shows how to deal with viewing both portrait and landscape oriented pictures in
+                            the image viewer which dynamically changes its width-to-height ratio, depending on the
+                            devise's screen size and orientation. All made dynamically, using vanilla javascript and
+                            some CSS.</p>
+                        <div class="post-info" class="clearfix"><img src="../images/js-icon.png" alt="javascript"
+                                class="no-gap">
+                            <span>November 30, 2019</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="codes-post clearfix">
+                    <a href="../posts/apps/5_form-valid/form-valid.html">
+                        <h2>Give some Form to this Form</h2>
+                        <p>HTML Contact Forms are an essential part of the webpage. All serious ones should to have it.
+                            If we want our viewers, potential customers, or business partners to get ahold of us, we
+                            should have clear, user friendly, funcionning and intuitive Contact Form on our site. If it
+                            misses any of these features, the communication may stop even before it starts. I created
+                            this simple form to swhow all of it can be done with 20 lines of code. </p>
+                        <div class="post-info" class="clearfix"><img src="../images/js-icon.png" alt="javascript"
+                                class="no-gap">
+                            <span>December 5, 2019</span>
+                        </div>
+                    </a>
+                </article>
+            </section>
+        </main>
+        <!--
+===============
+Footer Sections
+===============
+-->
+        <footer id="footer-section" class="clearfix">
+            <!-- Left Column -->
+            <div id="footer-left">
+                <h2>Contact</h2>
+
+                <form action="/action_page.php" method="POST" target="_self" name="contact-form" id="contact-form"
+                    width="100%" onsubmit="validateFormFx()">
+                    <fieldset>
+                        <legend>Hire Me!</legend>
+
+                        <input type="text" name="first-name" id="first-name" placeholder="Your First Name..."
+                            class="req" />
+                        <label for="first-name">*</label>
+                        <br /><br />
+                        <input type="text" name="last-name" id="last-name" placeholder="Your Last Name..."
+                            class="req" />
+                        <label for="last-name">*</label>
+                        <br /><br />
+                        <input type="email" name="email" id="email" placeholder="Your Email..." class="req" />
+                        <label for="email">*</label>
+                        <br /><br />
+                        <input type="tel" name="phone" id="phone" placeholder="000-000-0000"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="req" />
+                        <label for="phone">*</label>
+                        <br /><br />
+                        <input type="text" name="subject" id="subject" placeholder="Subject..." class="req" />
+                        <label for="subject">*</label>
+                        <br /><br />
+
+                        <textarea name="message" id="message" rows="5" class="req"
+                            placeholder="Write me a message.."></textarea>
+                        <label for="message" style="display:inline-block;vertical-align: top;">*</label>
+
+
+
+                        <fieldset>
+                            <legend>I Prefer To Communicate Via:</legend>
+                            <select name="com" id="com">
+                                <option value="phone-call">Phone Calls</option>
+                                <option value="text-mes">Text Messages</option>
+                                <option value="emails" Emails>Emails</option>
+                                <option value="Skype">Skype</option>
+                                <option value="WatsApp">WhatsApp</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Hangouts">Hangouts</option>
+                                <option value="person" selected>In Person</option>
+                            </select>
+                        </fieldset>
+                        <input type="radio" name="news" id="news" />
+                        <span>Please send me the newsletter by email.</span>
+                        <input type="submit" name="submit" id="submit" value="Submit!" />
+                    </fieldset>
+                </form>
+            </div>
+            <!-- Right Column-->
+            <div id="footer-right">
+                <div id="credentials">
+                    <h2>My tools</h2>
+                    <ul id="footer-tools">
+                        <li>
+                            <a class="" href="#">
+                                <p>PHP</p>
+                                <p><img src="../images/php-icon.png" alt="php" /></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>JavaScript</p>
+                                <p><img src="../images/js-icon.png" alt="javascript" /></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>MySQL</p>
+                                <p><img src="../images/mysql-icon.png" alt="mySql" /></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>BootStrap</p>
+                                <p><img src="../images/bootstrap-icon.png" alt="BootStrap" /></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>VS Code</p>
+                                <p>
+                                    <img src="../images/vcode-icon.png" alt="Visual Studio Code" />
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>GitHub</p>
+                                <p><img src="../images/git_hub-icon.png" alt="GitHub" /></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>AffinityPhoto</p>
+                                <p>
+                                    <img src="../images/affinity_photo-icon.png" alt="AffinityPhoto" />
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>AffinityDesigner</p>
+                                <p>
+                                    <img src="../images/affinity_designer-icon.png" alt="AffinityDesigner" />
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="copyright">Copyright © <span id="year"></span> Tomas Petr</div>
+            </div>
+        </footer>
+    </div>
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>
