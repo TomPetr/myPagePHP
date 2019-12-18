@@ -17,7 +17,7 @@ font-family: 'BioRhyme Expanded', serif;- brand-title
 }
 
 /* getting rid of gap under the img */
-.no-gap {
+figure {
     font-size: 0;
 }
 
@@ -156,10 +156,14 @@ header {
     top: 0;
 }
 
-.filtered {
+header>figure>img,
+#columns-3-frame a figure img,
+#credentials img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+
+
 
 /*      ===============
          Page Intro Sections
@@ -236,9 +240,6 @@ header {
     display: -webkit-flex;
     flex-direction: column;
     align-items: center;
-
-
-
 }
 
 
@@ -296,19 +297,23 @@ header {
 
 }
 
-#columns-3-frame .nav-button:nth-child(1) figure {
+#columns-3-frame a:nth-child(1) figure {
     border-top: 2px solid var(--absolut-black);
     border-left: 2px solid var(--absolut-black);
 }
 
-#columns-3-frame .nav-button:nth-child(2) figure {
+#columns-3-frame a:nth-child(2) figure {
     border-top: 2px solid var(--absolut-black);
     border-right: 2px solid var(--absolut-black);
 }
 
-#columns-3-frame .nav-button:nth-child(3) figure {
+#columns-3-frame a:nth-child(3) figure {
     border-bottom: 2px solid var(--absolut-black);
     border-right: 2px solid var(--absolut-black);
+}
+
+.lightgray {
+    background-color: lightgray;
 }
 
 /*     ===============

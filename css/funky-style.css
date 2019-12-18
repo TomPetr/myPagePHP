@@ -5,8 +5,8 @@
     padding: 0;
 }
 
-/* getting rid of mysterious gap under the image */
-.no-gap {
+/* getting rid of gap under the img */
+figure {
     font-size: 0;
 }
 
@@ -161,15 +161,13 @@ header {
 }
 
 /* main section */
-#main-content-wrapper {
+#main-section {
     background-color: #fafbef;
     width: 90%;
     margin: 0 auto 0.5rem auto;
 }
 
-#main-section {
-    margin: 0 5% 0 5%;
-}
+
 
 #columns-3-frame {
     border: 1rem solid #fafbef;
@@ -180,7 +178,7 @@ header {
     margin-bottom: 1rem;
 }
 
-.column-button {
+#columns-3-frame a {
     text-decoration: none;
     width: 100%;
     height: auto;
@@ -191,13 +189,15 @@ header {
 
 
 
-.column-background {
+#columns-3-frame a figure img {
     background-image: url("../images/column-background.png");
+    width: 100%;
+    height: auto;
 }
 
 
 
-.column-button h2 {
+#columns-3-frame a h2 {
     font-weight: bolder;
     font-size: 1.6rem;
     padding: 2%;
@@ -213,10 +213,7 @@ header {
 
 
 
-.column-img {
-    width: 100%;
-    height: auto;
-}
+
 
 /* footer section */
 #footer-section {
@@ -336,39 +333,39 @@ textarea.req-field {
 
     }
 
-    .column-button {
+    #columns-3-frame a {
         padding: 1%;
         text-align: center;
         background-color: #3a3a3a;
     }
 
     /* h2 & figure - sizing & positioning horizontally */
-    .column-button h2 {
+    #columns-3-frame a h2 {
         min-width: 39%;
         position: relative;
         z-index: 2;
     }
 
-    .column-button figure {
+    #columns-3-frame a figure {
         width: 50%;
         position: relative;
         z-index: 1;
     }
 
 
-    #columns-3-frame .column-button:nth-of-type(odd) h2 {
+    #columns-3-frame a:nth-of-type(odd) h2 {
         left: 10%;
     }
 
-    #columns-3-frame .column-button:nth-of-type(odd) figure {
+    #columns-3-frame a:nth-of-type(odd) figure {
         left: -10%;
     }
 
-    #columns-3-frame .column-button:nth-of-type(even) h2 {
+    #columns-3-frame a:nth-of-type(even) h2 {
         left: -10%;
     }
 
-    #columns-3-frame .column-button:nth-of-type(even) figure {
+    #columns-3-frame a:nth-of-type(even) figure {
         left: 10%;
     }
 
@@ -376,14 +373,14 @@ textarea.req-field {
 
     /* centering h2 & figure vertically */
 
-    .column-button:before,
-    .column-button h2,
-    .column-button figure {
+    #columns-3-frame a:before,
+    #columns-3-frame a h2,
+    #columns-3-frame a figure {
         display: inline-block;
         vertical-align: middle;
     }
 
-    .column-button:before {
+    #columns-3-frame a:before {
         content: " ";
         height: 100%;
     }
@@ -404,28 +401,28 @@ textarea.req-field {
         float: right;
     }
 
-    .column-button:before,
-    .column-button h2,
-    .column-button figure {
+    #columns-3-frame a:before,
+    #columns-3-frame a h2,
+    #columns-3-frame a figure {
         display: block;
 
     }
 
 
 
-    .column-button h2 {
+    #columns-3-frame a h2 {
         width: 100%;
         position: static;
 
     }
 
-    .column-button figure {
+    #columns-3-frame a figure {
         width: 100%;
         position: static;
 
     }
 
-    .column-button {
+    #columns-3-frame a {
         float: left;
         width: 32%;
         padding: 1% 0.5% 1% 0.5%;
@@ -433,7 +430,7 @@ textarea.req-field {
 
     }
 
-    .column-button h2 {
+    #columns-3-frame a h2 {
         margin-bottom: 2%;
 
         width: 100%;

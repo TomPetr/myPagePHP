@@ -8,7 +8,16 @@ box-3: info
 */
 
 
-.filtered {
+header>figure>img,
+#columns-3-frame a figure img,
+#credentials img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+header>nav>a>img,
+#columns-3-frame a figure img,
+#credentials img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
@@ -59,6 +68,17 @@ header {
     background-color: #181818e6;
 }
 
+
+form input[type="text"i],
+form input[type="email"i],
+form input[type="tel"i] {
+    width: 50%;
+
+}
+
+form textarea {
+    width: 90%;
+}
 
 
 /* Media Queries */
