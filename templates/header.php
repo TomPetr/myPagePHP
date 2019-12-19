@@ -4,9 +4,9 @@
             <nav id="nav-main" class="clearfix">
                 <ul id="nav-main-menu">
                     <li class="active"><a href="./index.php">home</a></li>
-                    <li><a href="../../pages/codes.html">codes</a></li>
-                    <li><a href="../../pages/apps.html">apps</a></li>
-                    <li><a href="../../pages/faces.html">faces</a></li>
+                    <li><a href="./codes.php">codes</a></li>
+                    <li><a href="./apps.php">apps</a></li>
+                    <li><a href="./faces.php">faces</a></li>
                 </ul>
             </nav>
 

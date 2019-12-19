@@ -25,9 +25,9 @@
         -->
     <?php include('../../templates/header.php'); ?>
    
-    <!-- *** HOME PAGE CONTENT *** -->
+    <!-- *** CODES PAGE CONTENT *** -->
 
-<?php include('../../content/home-content.php'); ?>
+<?php include('../../content/codes-content.php'); ?>
    
     <!-- 
      ===============

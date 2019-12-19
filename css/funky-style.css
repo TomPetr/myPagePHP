@@ -512,3 +512,240 @@ textarea.req-field {
 
     }
 }
+
+/* CSS for CODES & APPS page */
+
+#posts {
+
+
+    width: 90%;
+    margin: 0 auto 1rem auto;
+    padding-bottom: 1rem;
+}
+
+#posts>article {
+
+    height: auto;
+    margin-bottom: 0.5rem;
+    background-color: #FAFBEF;
+}
+
+
+
+.codes-post>a {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+
+    height: 100%;
+}
+
+.codes-post>a:link {
+    text-decoration: none;
+    color: #000;
+}
+
+.codes-post>a:visited {
+    color: #000;
+}
+
+
+.codes-post>a>h2 {
+
+
+    flex: 0 1 1.5rem;
+    text-transform: uppercase;
+
+    color: #000;
+
+    font-size: 1.2rem;
+
+}
+
+.codes-post>a>p {
+
+    flex: 0 1 0%;
+    text-align: justify;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #000;
+}
+
+.codes-post>a:hover h2 {
+    color: #e40d0d;
+
+    text-align: center;
+    background-color: #343941;
+}
+
+
+
+
+.post-info {
+
+    background-color: #2b3441;
+    flex: 0 1;
+    margin-top: auto;
+
+
+}
+
+.codes-post>a>h2,
+.codes-post>a>p,
+.post-info {
+    padding: 0.5rem;
+}
+
+.post-info img {
+    height: 3rem;
+    vertical-align: middle;
+
+}
+
+.post-info span {
+    font-family: monospace;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #f09898;
+    float: right;
+    line-height: 3rem;
+
+}
+
+/* Media Quries */
+@media all and (min-width:992px) {
+    #posts {
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+
+    #posts>article {
+
+        flex: 0 1 49.5%;
+    }
+
+    #posts>article:nth-of-type(even) {
+
+        margin-left: auto;
+    }
+}
+
+/*  CSS for FACES page  */
+
+/*  Face Pace's Main Section  */
+.face-posts-wrapper {
+
+    width: 90%;
+    margin: 0 auto 1% auto;
+}
+
+
+.face-post {
+    margin-bottom: 1.5rem;
+    background-color: #fafbef;
+}
+
+.face-post a:link {
+    text-decoration: none;
+
+}
+
+.face-post a:visited {
+    color: #000;
+}
+
+.face-post a:hover figure img {
+    border: 3px solid #6388b7;
+}
+
+.face-post a:hover h2 {
+    background-color: #1e3452;
+    color: #6388b7;
+}
+
+.face-description {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+}
+
+.face-description h2 {
+
+    padding: 2%;
+    background-color: #6388b7;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+    color: #1e3452;
+    text-align: center;
+
+
+}
+
+
+
+.face-description figure {
+    width: 100%;
+}
+
+
+
+.face-description p {
+    text-align: justify;
+    font-size: 110%;
+    font-weight: 900;
+    display: inline-block;
+
+
+}
+
+.face-description figure img {
+    width: 100%;
+    height: auto;
+
+    border: 3px solid #000;
+}
+
+/* Media Queries */
+@media all and (min-width:768px) {
+    .face-description h2 {
+
+        width: 90%;
+        font-size: 2em;
+        text-align: right;
+        padding-left: 1rem;
+        margin-left: -4%;
+    }
+
+    .face-description figure {
+        float: left;
+        width: 48%;
+    }
+
+    .face-description p {
+        width: 50%;
+        padding-left: 1rem;
+    }
+}
+
+@media all and (min-width:992px) {
+
+
+    .face-description h2 {
+        width: 50%;
+        float: right;
+        margin-right: -2.5%;
+        text-align: center;
+    }
+
+
+}

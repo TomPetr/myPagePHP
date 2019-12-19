@@ -24,10 +24,7 @@
 
 
 </head>
-<style>
 
-</style>
-</head>
 
 <body class="bg-dark text-light">
 
