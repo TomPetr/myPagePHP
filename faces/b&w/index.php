@@ -1,3 +1,4 @@
+<?php include('../../data/nav.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,39 +16,28 @@
 </head>
 
 <body>
-    <div id="page-wrapper">
-        <!--   
+  <div class="page-wrapper">
+    <!--   
         ===============
         Header Sections
         ===============
         -->
-        <?php
-        include('../../templates/header.php');
-        ?>
-        <!--   
-         ===============
-         Page Intro Sections
-         ===============
-         -->
-        <?php include('../../templates/home-intro.php'); ?>
+    <?php include('../../templates/header.php'); ?>
+   
+    <!-- *** HOME PAGE CONTENT *** -->
 
+<?php include('../../content/home-content.php'); ?>
+   
+    <!-- 
+     ===============
+     Footer Sections
+     ===============
+    -->
+    <?php include('../../templates/footer.php'); ?>
+    
+  </div>
+  <script src="../../scripts/main.js"></script>
 
-        <!-- 
-        ===============
-        Main Content Sections
-        ===============
-        -->
-
-        <?php include('../../templates/home-main.php'); ?>
-
-        <!-- 
-        ===============
-        Footer Sections
-        ===============
-        -->
-        <?php include('../../templates/footer.php'); ?>
-    </div>
-    <script src="../../scripts/main.js"></script>
 </body>
 
 </html>

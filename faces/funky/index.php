@@ -1,3 +1,10 @@
+<?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1); ?>
+
+<?php include('../../data/nav.php'); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +34,7 @@
    
     <!-- *** HOME PAGE CONTENT *** -->
 
-<?php include('../../content/home-content.php'); ?>
+    <?php include('../../content/home-content.php'); ?>
    
     <!-- 
      ===============

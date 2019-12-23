@@ -2,12 +2,7 @@
     <!-- header -->
             <!-- Top Navigation  -->
             <nav id="nav-main" class="clearfix">
-                <ul id="nav-main-menu">
-                    <li class="active"><a href="./index.php">home</a></li>
-                    <li><a href="./codes.php">codes</a></li>
-                    <li><a href="./apps.php">apps</a></li>
-                    <li><a href="./faces.php">faces</a></li>
-                </ul>
+                <?php include('../../templates/nav-top.php'); ?>
             </nav>
 
             <!-- Logo -->

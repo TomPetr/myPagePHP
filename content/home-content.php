@@ -1,4 +1,4 @@
-
+<?include '../../data/home-data.php' ?>
  <!--   
          ===============
          Page Intro Sections
@@ -14,18 +14,15 @@
       <div id="intro-content" class="clearfix">
         <!-- intro paragraph #1 -->
         <p>
-          Hello, my name is Tomas Petr. My interests include web app
-          development, photography, creating Photoshop fantasies, and
-          observing human behavior to better understand people. I strive
-          to describe such behaviors in the short stories I write.
+          <?php 
+          echo $homeText[0]['text'];
+          ?>
         </p>
         <!-- intro paragraph #2 -->
         <p>
-          I live in Salt Lake City now. Prior to migrating to the U.S.
-          from my native Czech Republic, I studied mechanical engineering.
-          I’m currently studying web development at Salt Lake Community
-          College. I want to learn how to build modern Websites using
-          HTLM5, CSS, and JavaScript.
+          <?php 
+          echo $homeText[1]['text'];
+          ?>
         </p>
       </div>
     </section>
