@@ -1,4 +1,4 @@
-
+<?include '../../data/page-intro/codes-data.php' ?>
         <!--   
          ===============
          Page Intro Sections
@@ -7,22 +7,23 @@
         <section id="page-intro">
             <!-- Page Title -->
             <div id="intro-title" class="clearfix">
-                <h1>Learn and Sahre. Learning by Sharing.</h1>
+                <h1><?php echo $codesTitle ?></h1>
             </div>
             <!-- intro paragraphs -->
             <div id="intro-content" class="clearfix">
                 <!-- intro paragraph #1 -->
                 <p>
-                    I found web development to be the right area where all my interests meet- logic, problem solving and
-                    abstract thinking for coding; graphic art and human behaviors for user's experience and visual
-                    appearance; and lastly, story writing for creativity and imagination.
+                    <?php 
+          echo $codesText[0]['text'];
+          ?>
                 </p>
                 <!-- intro paragraph #2 -->
                 <p>
-                    On this page I want to share the code snipets I created in process of solving the proplems
-                    associated
-                    with developing this site. Sharing and explaining how the snippets work helps me to thing obout the
-                    problems more in depth and write more clear code.
+                  <?php 
+          echo $codesText[1]['text'];
+          ?>
+                
+                    
                 </p>
             </div>
         </section>

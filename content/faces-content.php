@@ -1,4 +1,4 @@
-
+<?include '../../data/page-intro/faces-data.php' ?>
         <!--   
          ===============
          Page Intro Sections
@@ -7,22 +7,23 @@
         <section id="page-intro">
             <!-- Page Title -->
             <div id="intro-title" class="clearfix">
-                <h1>Spin the Color Wheel and Decide.</h1>
+                <h1><?php echo $facesTitle ?></h1>
             </div>
             <!-- intro paragraphs -->
             <div id="intro-content" class="clearfix">
                 <!-- intro paragraph #1 -->
                 <p>
-                    I love taking the photos and playing with them in the Photoshop. Changing their colors, atmosphere,
-                    and creating new fantasy. Or better to say, creating new face to the reality. Also I look at
-                    websites as at the faces of their owners, how they want to be presented to the outside world.
+                   <?php 
+          echo $facesText[0]['text'];
+          ?> 
                 </p>
                 <!-- intro paragraph #2 -->
                 <p>
-                    On this page, I want to show the power of CSS, how different styling can change the page's
-                    appearance. It's fascinating how creative it can be to apply different set of CSS rules to the same
-                    HTML structure, and then, to watch how entire atmosphere changes. And it's when the page gets its
-                    new face.
+                <?php 
+          echo $facesText[1]['text'];
+          ?>
+                
+                    
                 </p>
             </div>
         </section>

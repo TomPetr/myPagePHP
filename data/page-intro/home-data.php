@@ -1,4 +1,5 @@
 <?php 
+$homeTitle = "Tomas' Web of Creativity";
 $homeText = array(
 array(
     "textNo" => 1,

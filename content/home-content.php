@@ -1,4 +1,4 @@
-<?include '../../data/home-data.php' ?>
+<?include '../../data/page-intro/home-data.php' ?>
  <!--   
          ===============
          Page Intro Sections
@@ -8,7 +8,7 @@
 <section id="page-intro">
       <!-- Page Title -->
       <div id="intro-title" class="clearfix">
-        <h1>Tomas' Web of Creativity</h1>
+        <h1><?php echo $homeTitle ?></h1>
       </div>
       <!-- intro paragraphs -->
       <div id="intro-content" class="clearfix">

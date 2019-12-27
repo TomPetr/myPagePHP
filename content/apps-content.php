@@ -1,4 +1,5 @@
-
+<?include '../../data/page-intro/apps-data.php' ?>
+<?include '../../data/page-posts/apps-posts.php' ?>
         <!--   
          ===============
          Page Intro Sections
@@ -7,21 +8,21 @@
         <section id="page-intro">
             <!-- Page Title -->
             <div id="intro-title" class="clearfix">
-                <h1>Live for Code. Code for Life: Examples</h1>
+                <h1><?php echo $appsTitle ?></h1>
             </div>
             <!-- intro paragraphs -->
             <div id="intro-content" class="clearfix">
                 <!-- intro paragraph #1 -->
                 <p>
-                    The most appealing part of web development is the fact that it is created for people by people,
-                    therefore teamwork and listening to user feedback is crucial. This human aspect allows me to
-                    interact with many individuals, which I enjoy.
+                   <?php 
+          echo $appsText[0]['text'];
+          ?>
                 </p>
                 <!-- intro paragraph #2 -->
                 <p>
-                    This page will show my micro web apps. This apps are creatd using techniques and
-                    code snippets I described on my previous Codes page. I found web apps development very interesting
-                    because it lets me to transform my knowledge and skills into something useful.
+                  <?php 
+          echo $appsText[1]['text'];
+          ?>
                 </p>
             </div>
         </section>
@@ -35,6 +36,23 @@ Main Content Sections
         <main>
 
             <section id="posts" class="clearfix">
+            <?php
+foreach ($appsPosts as $post) {
+    echo '<article class="codes-post">
+                    <a href="../posts/apps/3_asynchronous/asynchronous.html">
+                        <h2>Stopping Asynchronous Misbehavior </h2>
+                        <p>If I want to display a few images on my webpage I can hardcode each image\'s position in HTML
+                            and then hardcode the source of each picture. But what about if I want to display entire
+                            image gallery? In that case, that case, I pulled src for each image from JSON file. And it\'s
+                            when JavaScript becomes the loose cannon, it\'s when it becomes Asynchronous. </p>
+                        <div class="post-info" class="clearfix"><img src="../../images/js-icon.png" alt="javascript"
+                                class="no-gap">
+                            <span>November 28, 2019</span>
+                        </div>
+                    </a>
+                </article>';
+}
+            ?>
 
                 <article class="codes-post">
                     <a href="../posts/apps/3_asynchronous/asynchronous.html">
