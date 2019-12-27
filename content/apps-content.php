@@ -39,7 +39,7 @@ Main Content Sections
             <?php
 foreach ($appsPosts as $post) {
     echo '<article class="codes-post">
-                    <a href="../posts/apps/3_asynchronous/asynchronous.html">
+                    <a href="../posts/apps/'$post[slug]'"'>
                         <h2>Stopping Asynchronous Misbehavior </h2>
                         <p>If I want to display a few images on my webpage I can hardcode each image\'s position in HTML
                             and then hardcode the source of each picture. But what about if I want to display entire
