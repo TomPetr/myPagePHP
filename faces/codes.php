@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1); ?>
 <?php include('../data/nav.php'); ?>
 <?php include('../data/front-nav.php'); ?>
+<?php define('TITLE', "Code Snippets | Tomas Petr"); ?>
 <?php 
 if (isset($_GET['item'])) {
   $navItem = $_GET['item'];
