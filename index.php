@@ -1,3 +1,9 @@
+<?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1); ?>
+
+<?php include('data/front-nav.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,9 +32,13 @@
         <nav id=nav>
             <i id="bars" class="fas fa-bars"></i>
             <div id="menu">
-                <a href="./faces/funky/index.php"><img src="./images/funky.jpg" alt="funky theme"></a>
-                <a href="./faces/b&w/index.php"><img src="./images/b&w.jpg" alt="B&W theme"></a>
-                <a href="./faces/squares/index.html"><img src="./images/squared.jpg" alt="square theme"></a>
+                <?php foreach($frontNav as $nav => $item) { ?>
+                    <a href="./faces/index.php?item=<?php echo $nav; ?>"><img src="./images/<?php echo $item['img'] ?>" alt="<?php echo $item['name'] ?>"></a>
+                       <?php } ?>
+              
+                <a href="./faces/squares/index.php"><img src="./images/squared.jpg" alt="square theme"></a>
+
+
             </div>
         </nav>
         <p class="welcome">Web Development</p>

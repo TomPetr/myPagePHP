@@ -1,16 +1,20 @@
 <?php 
 error_reporting(E_ALL);
 ini_set('display_errors', 1); ?>
+<?php include('../data/nav.php'); ?>
+<?php include('../data/front-nav.php'); ?>
+<?php 
+if (isset($_GET['item'])) {
+  $navItem = $_GET['item'];
+  $theme = $navItems[$navItem];
+}
+?> 
 
-<?php include('../../data/nav.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include('../../templates/head.php'); ?>
+<?php include('../templates/head.php'); ?>
 </head>
-
-  
-
 
 <body>
   <div class="page-wrapper">
@@ -19,18 +23,18 @@ ini_set('display_errors', 1); ?>
         Header Sections
         ===============
         -->
-    <?php include('../../templates/header.php'); ?>
+    <?php include('../templates/header.php'); ?>
    
-    <!-- *** HOME PAGE CONTENT *** -->
+    <!-- *** CODES PAGE CONTENT *** -->
 
-    <?php include('../../content/home-content.php'); ?>
+<?php include('../content/codes-content.php'); ?>
    
     <!-- 
      ===============
      Footer Sections
      ===============
     -->
-    <?php include('../../templates/footer.php'); ?>
+    <?php include('../templates/footer.php'); ?>
     
   </div>
   <script src="../../scripts/main.js"></script>

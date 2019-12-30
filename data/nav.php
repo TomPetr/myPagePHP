@@ -1,18 +1,18 @@
 <?php
 $navItems = array(
-    array(
+    "home" => array(
         "slug"  => "index.php",
         "title" => "home"
     ),
-    array(
+    "codes" => array(
         "slug"  => "codes.php",
         "title" => "codes"
     ),
-    array(
+    "apps" => array(
         "slug"  => "apps.php",
         "title" => "apps"
     ),
-    array(
+    "faces" => array(
         "slug"  => "faces.php",
         "title" => "faces"
     ),

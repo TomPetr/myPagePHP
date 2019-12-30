@@ -10,9 +10,11 @@
     <title>B&W Theme</title>
     <!-- stylesheets -->
     <link rel="stylesheet" href="../../css/b&w-style.css" />
-    <link rel="icon" href="../../favicon.ico" type="image/ico" sizes="16x16" />
+    
     <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded|Share+Tech+Mono&display=swap"
         rel="stylesheet">
+        <!-- favicon -->
+    <link rel="icon" href="../../favicon.ico" type="image/ico" sizes="16x16" />
 </head>
 
 <body>

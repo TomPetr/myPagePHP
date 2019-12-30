@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<!-- <body onload="randomNum()"> -->
+
+<body>
+
+
+    <button onclick="getNumbers()">
+        Click for the random nubers
+    </button>
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1 random"></div>
+        <div class="col-sm-1 random"></div>
+        <div class="col-sm-1 random"></div>
+    </div>
+    <script>
+        // 1) finding all elements with class = "random" and saving them in var allElements. It's HTMLCollection
+        var allElements = document.getElementsByClassName("random");
+        // 2) converting this HTMLCollection to an array so forEach method can be used as forEach method cannot
+        //    be used on HTMLCollection, only on an array
+        var allElmArray = Array.from(allElements);
+
+        // 3) when a buttom is clicked the getNumbers() function is triggered
+        function getNumbers() {
+            // the randomNum() function is called on each element and random # is set to elemnt's innerHTML
+            allElmArray.forEach(element => element.innerHTML = randomNum());
+        }
+
+        function randomNum() {
+            return Math.floor(Math.random() * 10);
+        }
+    </script>
+
+</body>
+
+</html>
