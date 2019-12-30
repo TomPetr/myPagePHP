@@ -1,5 +1,5 @@
-<?include '../../data/page-intro/codes-data.php' ?>
-<?include '../../data/page-posts/codes-posts.php' ?>
+<?include '../data/page-intro/codes-intro.php' ?>
+<?include '../data/page-posts/codes-posts.php' ?>
         <!--   
          ===============
          Page Intro Sections

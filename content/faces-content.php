@@ -1,5 +1,5 @@
-<?include '../../data/page-intro/faces-data.php' ?>
-<?include '../../data/page-posts/faces-posts.php' ?>
+<?include '../data/page-intro/faces-intro.php' ?>
+<?include '../data/page-posts/faces-posts.php' ?>
         <!--   
          ===============
          Page Intro Sections
@@ -49,7 +49,7 @@ Main Content Sections
                     <a href="../../faces/<?php echo $post['slug']; ?>" target="_self" class="face-description clearfix">
                         <h2 class="clearfix"><?php echo $post['title']; ?></h2>
                         <figure class="no-gap">
-                            <img src="../../images/<?php echo $post['face']; ?>" alt="<?php $post['title']; ?>" title="<?php echo $post['title']; ?>" class="face-img" />
+                            <img src="../images/<?php echo $post['face']; ?>" alt="<?php $post['title']; ?>" title="<?php echo $post['title']; ?>" class="face-img" />
                         </figure>
                         <p>
                             <?php echo $post['text']; ?>

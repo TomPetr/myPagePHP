@@ -7,7 +7,7 @@
     <?php
 
     foreach($navItems as $nav => $item) { ?>
-        <li><a href="<?php echo $item['slug']; ?>?item=<?php echo $nav; ?>"><?php echo $item['title']; ?></a></li>
+        <li><a href="<?php echo $item['slug']; ?>?item=<?php echo $navItem ?>"><?php echo $item['title']; ?></a></li>
         
    <?php  } ?>
 

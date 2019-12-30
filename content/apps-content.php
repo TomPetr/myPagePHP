@@ -1,5 +1,5 @@
-<?include '../../data/page-intro/apps-data.php' ?>
-<?include '../../data/page-posts/apps-posts.php' ?>
+<?include '../data/page-intro/apps-intro.php' ?>
+<?include '../data/page-posts/apps-posts.php' ?>
         <!--   
          ===============
          Page Intro Sections

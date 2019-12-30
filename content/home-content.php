@@ -1,4 +1,4 @@
-<?include '../data/page-intro/home-data.php' ?>
+<?include '../data/page-intro/home-intro.php' ?>
  <!--   
          ===============
          Page Intro Sections

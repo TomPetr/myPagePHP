@@ -9,9 +9,9 @@ if (isset($_GET['item'])) {
   $theme = $frontNav[$navItem];
 }
 ?> 
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <?php include('../templates/head.php'); ?>
 </head>
@@ -27,7 +27,7 @@ if (isset($_GET['item'])) {
    
     <!-- *** CODES PAGE CONTENT *** -->
 
-<?php include('../content/codes-content.php'); ?>
+<?php include('../content/apps-content.php'); ?>
    
     <!-- 
      ===============
@@ -37,7 +37,7 @@ if (isset($_GET['item'])) {
     <?php include('../templates/footer.php'); ?>
     
   </div>
-  <script src="../../scripts/main.js"></script>
+  <script src="../scripts/main.js"></script>
 
 </body>
 
