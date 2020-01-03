@@ -316,6 +316,79 @@ header>figure>img,
     background-color: lightgray;
 }
 
+/*  posts */
+#posts>article {
+    border-bottom: 1px solid black;
+}
+
+#posts>article>a,
+.face-post>a {
+    color: black;
+    text-decoration: none;
+
+}
+
+#posts>article>a:hover h2 {
+    font-size: 1.5em;
+
+}
+
+#posts>article h2 {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.post-info img {
+    height: 3rem;
+    vertical-align: middle;
+    margin-bottom: 0.5rem;
+}
+
+.post-info>span {
+    float: right;
+    font-style: italic;
+}
+
+.face-post {
+    border-top: 1px solid #000;
+}
+
+.face-post>a {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.face-post>a>h2,
+.face-post>a>figure,
+.face-post>a>p {
+    flex: 1 0 100%;
+}
+
+.face-post>a>h2 {
+    text-align: center;
+}
+
+.face-post>a>h2:hover {
+
+    letter-spacing: 0.4rem;
+}
+
+.face-post>a>figure {
+    margin-bottom: 0.6rem;
+}
+
+.face-post>a>figure>img {
+    width: 100%;
+    border: 3px solid #000;
+}
+
+
 /*     ===============
         Footer Sections
         =============== */
@@ -444,6 +517,24 @@ textarea {
     #nav-main {
         flex-basis: 25%;
     }
+
+    .face-post>a>h2,
+    .face-post>a>figure,
+    .face-post>a>p {
+        flex: 1 0 50%;
+    }
+
+    .face-post>a>h2 {
+        align-self: center;
+    }
+
+    .face-post {
+        padding-top: 1rem;
+    }
+
+    .face-post:not(:last-of-type) {
+        padding-bottom: 1rem;
+    }
 }
 
 @media all and (min-width: 992px) {
@@ -505,6 +596,9 @@ textarea {
         flex-basis: 30%;
 
     }
+
+    /* posts */
+
 
     #footer-left,
     #footer-right {

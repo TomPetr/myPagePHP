@@ -33,10 +33,10 @@ ini_set('display_errors', 1); ?>
             <i id="bars" class="fas fa-bars"></i>
             <div id="menu">
                 <?php foreach($frontNav as $nav => $item) { ?>
-                    <a href="./faces/index.php?item=<?php echo $nav; ?>"><img src="./images/<?php echo $item['img'] ?>" alt="<?php echo $item['name'] ?>"></a>
+                    <a href="./pages/index.php?item=<?php echo $nav; ?>"><img src="./images/<?php echo $item['img'] ?>" alt="<?php echo $item['name'] ?>"></a>
                        <?php } ?>
               
-                <a href="./faces/squares/index.php"><img src="./images/squared.jpg" alt="square theme"></a>
+                <a href="./pages/squares/index.php"><img src="./images/squared.jpg" alt="square theme"></a>
 
 
             </div>

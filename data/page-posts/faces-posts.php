@@ -1,6 +1,7 @@
 <?php  
 $facesPosts = array(
     array(
+        "item" => "bw",
         "slug" => "b&w/index.php", 
         "face" => "b&w.jpg",
         "title" => "B&W Theme",
@@ -12,6 +13,7 @@ $facesPosts = array(
         
     ),
     array(
+        "item" => "squares",
         "slug" => "squares/index.php", 
         "face" => "squared.jpg",
         "title" => "Squared Theme",
@@ -20,6 +22,7 @@ $facesPosts = array(
                             used a Bootstrap CSS framework.",
     ),
     array(
+        "item" => "funky",
         "slug" => "funky/index.php", 
         "face" => "funky.jpg",
         "title" => "Funky Theme",

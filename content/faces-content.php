@@ -36,17 +36,15 @@ Main Content Sections
 ===============
 -->
 
-        <main>
+        <main id="main-section">
             <section class="face-posts-wrapper" class="clearfix">
             <?php
-                foreach ($facesPosts as $post) { ?>
-
-
-
-
-
-                    <article class="face-post" class="clearfix">
-                    <a href="../../faces/<?php echo $post['slug']; ?>" target="_self" class="face-description clearfix">
+            
+               foreach ($facesPosts as $post) { 
+                   
+                   if($post['title'] == "B&W Theme" || $post['title'] == "Funky Theme") { ?>
+                      <article class="face-post" class="clearfix">
+                    <a href="../pages/faces.php?item=<?php echo $post['item']; ?>" target="_self" class="face-description clearfix">
                         <h2 class="clearfix"><?php echo $post['title']; ?></h2>
                         <figure class="no-gap">
                             <img src="../images/<?php echo $post['face']; ?>" alt="<?php $post['title']; ?>" title="<?php echo $post['title']; ?>" class="face-img" />
@@ -55,10 +53,25 @@ Main Content Sections
                             <?php echo $post['text']; ?>
                         </p>
                     </a>
-                </article>";
+                </article>
+            <?php
+                   } elseif($post['title'] == "Squared Theme") { ?>
+                <article class="face-post" class="clearfix">
+                    <a href="../pages/squares/index.php" target="_self" class="face-description clearfix">
+                        <h2 class="clearfix"><?php echo $post['title']; ?></h2>
+                        <figure class="no-gap">
+                            <img src="../images/<?php echo $post['face']; ?>" alt="<?php $post['title']; ?>" title="<?php echo $post['title']; ?>" class="face-img" />
+                        </figure>
+                        <p>
+                            <?php echo $post['text']; ?>
+                        </p>
+                    </a>
+                </article>
                 <?php
-                }
-                ?>
+                   }
+               }
+            ?>   
+            
                 
             </section>
         </main>

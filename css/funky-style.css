@@ -223,10 +223,6 @@ header {
     top: 0;
 }
 
-#message {
-    width: 90%;
-    max-width: 90%;
-}
 
 
 
@@ -249,6 +245,12 @@ label {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
+
+#message {
+    width: 90%;
+    max-width: 90%;
+}
+
 
 input[type=text],
 input[type=email],
@@ -657,7 +659,7 @@ textarea.req-field {
 
 .face-post a:link {
     text-decoration: none;
-
+    color: #000;
 }
 
 .face-post a:visited {
@@ -666,6 +668,7 @@ textarea.req-field {
 
 .face-post a:hover figure img {
     border: 3px solid #6388b7;
+
 }
 
 .face-post a:hover h2 {

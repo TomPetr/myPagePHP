@@ -36,15 +36,15 @@ Main Content Sections
 ===============
 -->
 
-        <main>
+        <main id="main-section">
            <section id="posts" class="clearfix">
              <?php
                 foreach ($codesPosts as $post) {
                     echo "<article class=\"codes-post\">
-                            <a href=\"../posts/apps/$post[slug]\">
+                            <a href=\"../posts/codes/$post[slug]\">
                                <h2>$post[title]</h2>
                                <p>$post[text]</p>
-                               <div class=\"post-info clearfix\"><img src=\"../../images/$post[img]\" alt=\"$post[categories]\"
+                               <div class=\"post-info clearfix\"><img src=\"../images/$post[img]\" alt=\"$post[categories]\"
                                 class=\"no-gap\">
                                    <span>$post[date]</span>
                                </div>
