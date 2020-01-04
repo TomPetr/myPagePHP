@@ -34,12 +34,35 @@ header>nav>a>img,
     border-radius: 0 20px 0 20px;
 }
 
-#columns-3-frame>a:nth-of-type(even) {
+
+
+#columns-3-frame>a:nth-of-type(even) a {
     border-radius: 20px 0 20px 0;
 }
 
 #columns-3-frame figure {
     display: none;
+}
+
+#posts>a:nth-of-type(even) {
+    border-radius: 20px 0 20px 0;
+}
+
+#posts>a:nth-of-type(odd) {
+    border-radius: 0 20px 0 20px;
+}
+
+.post-info {
+    height: 40px;
+}
+
+.post-info>img {
+    height: 100%;
+    width: auto;
+}
+
+#posts figure>img {
+    width: 100%;
 }
 
 #footer-left {

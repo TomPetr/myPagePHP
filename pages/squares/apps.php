@@ -1,5 +1,5 @@
-<?include '../../data/page-intro/home-intro.php' ?>
-<?include '../../data/page-posts/home-body.php' ?>
+<?include '../../data/page-intro/apps-intro.php' ?>
+<?include '../../data/page-posts/apps-posts.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!-- description -->
-    <title>Tomas Petr | Web of Creativity- Home</title>
+    <title>Web Apps | Tomas Petr</title>
     <!-- stylesheets -->
     <link rel="stylesheet" href="../../css/squares-style.css" />
     <link rel="icon" href="../../favicon.ico" type="image/ico" sizes="16x16" />
@@ -82,7 +82,6 @@
 
 
         </header>
-
         <!--   
         ===============
         Page Intro Sections
@@ -92,27 +91,25 @@
         <section id="page-intro" class="container col-12 col-md-10">
             <!-- Page Title -->
             <div id="brand-title" class="row col-12 text-center">
-                <h1><?php echo $homeTitle ?></h1>
+                <h1><?php echo $appsTitle ?></h1>
             </div>
             <!-- intro paragraphs -->
             <div id="intro-content" class="d-flex flex-column justify-content-center mb-3">
                 <!-- intro paragraph #1 -->
-                <p class="col-md-8 bg-secondary font-weight-bold lead p-2 text-justify flex-grow-1 flex-shrink-1">
+                <p class="col-md-8 bg-danger font-weight-bold lead p-2 text-justify flex-grow-1 flex-shrink-1">
                     <?php 
-                      echo $homeText[0]['text'];
+                      echo $appsText[0]['text'];
                     ?>
                 </p>
                 <!-- intro paragraph #2 -->
-                <p class="col-md-8 bg-secondary ml-auto font-weight-bold lead p-2 text-justify flex-grow-1 flex-shrink-1">
+                <p class="col-md-8 bg-warning ml-auto font-weight-bold lead p-2 text-justify flex-grow-1 flex-shrink-1">
                     <?php 
-                      echo $homeText[1]['text'];
+                      echo $appsText[1]['text'];
                     ?>
                 </p>
             </div>
 
         </section>
-
-
         <!-- 
         ===============
         Main Content Sections
@@ -125,37 +122,30 @@
             <!-- Page's nav thumbs-->
 
 
-            <div id="columns-3-frame" class="d-flex flex-row flex-wrap">
-                <!-- Thumb #1-->
-                <a href="./codes.php" class="d-flex justify-content-around align-items-center mt-0 mb-2 col-12 flex-md-column col-md-4 bg-danger nav-link
-                    text-light flex-shrink-1 border border-dark" title="codes page">
-                    <h2 class="text-uppercase">codes</h2>
-                    <i class="fas fa-code fa-7x fa-border"></i>
-                    <figure>
-                        <img src="../../images/codes.png" alt="Codes" class="col-6 filtered"
-                            style="background-color: lightgray;" />
-                    </figure>
-                </a>
-                <!-- Thumb #2-->
-                <a href="../../pages/apps.php" class="d-flex justify-content-around align-items-center mt-0 mb-2 col-12 flex-md-column col-md-4 bg-warning nav-link
-                    text-light flex-shrink-1 border border-dark" title="apps page">
-                    <figure>
-                        <img src="../../images/apps.png" alt="Apps" class="column-button filtered" />
-                    </figure>
-                    <h2 class="text-uppercase">apps</h2>
-                    <i class="fas fa-cogs fa-7x order-1 fa-border"></i>
-                </a>
-                <!-- Thumb #3-->
-                <a href="../../pages/faces.php"
-                    class="d-flex justify-content-around align-items-center mt-0 mb-2 col-12 flex-md-column col-md-4 bg-info nav-link text-light flex-shrink-1 border border-dark"
-                    title="faces page">
-                    <h2 class="text-uppercase">faces</h2>
-                    <i class="fas fa-theater-masks fa-7x fa-border"></i>
-                    <figure>
-                        <img src="../../images/faces.jpg" alt="Photos" class="column-button filtered" />
-                    </figure>
-                </a>
-            </div>
+            <section id="posts" class="d-flex flex-row justify-content-between flex-wrap">
+                <?php foreach($appsPosts as $post) { ?>
+                   
+                            <a href="../../posts/codes/<?php echo $post['slug'] ?>" class="d-flex flex-column align-items-center mt-0 mb-2 col-12  bg-info nav-link
+                            text-light border border-dark col-lg-6 align-self-stretch" title="<?php echo $post['title'] ?>">
+                               <h2 class="text-uppercase"><?php echo $post['title'] ?></h2>
+                               <p><?php echo $post['text'] ?></p>
+                               <div class="post-info clearfix"><img src="../../images/js-icon.png" alt="javascript" class="no-gap">
+                                   <span><?php echo $post['date'] ?></span>
+                               </div>
+                            </a>
+            
+
+                <?php } ?>
+                
+                
+                
+                
+
+            
+                
+                
+                
+            </section>
         </main>
 
         <!-- 
