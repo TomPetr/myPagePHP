@@ -57,7 +57,7 @@ Main Content Sections
             <?php
                    } elseif($post['title'] == "Squared Theme") { ?>
                 <article class="face-post" class="clearfix">
-                    <a href="../pages/squares/index.php" target="_self" class="face-description clearfix">
+                    <a href="../pages/squares/faces.php" target="_self" class="face-description clearfix">
                         <h2 class="clearfix"><?php echo $post['title']; ?></h2>
                         <figure class="no-gap">
                             <img src="../images/<?php echo $post['face']; ?>" alt="<?php $post['title']; ?>" title="<?php echo $post['title']; ?>" class="face-img" />

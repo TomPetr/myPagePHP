@@ -125,7 +125,7 @@
             <section id="posts" class="d-flex flex-row justify-content-between flex-wrap">
                 <?php foreach($appsPosts as $post) { ?>
                    
-                            <a href="../../posts/codes/<?php echo $post['slug'] ?>" class="d-flex flex-column align-items-center mt-0 mb-2 col-12  bg-info nav-link
+                            <a href="../../posts/apps/<?php echo $post['slug'] ?>" class="d-flex flex-column align-items-center mt-0 mb-2 col-12  bg-info nav-link
                             text-light border border-dark col-lg-6 align-self-stretch" title="<?php echo $post['title'] ?>">
                                <h2 class="text-uppercase"><?php echo $post['title'] ?></h2>
                                <p><?php echo $post['text'] ?></p>

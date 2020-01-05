@@ -128,12 +128,12 @@
                    
                    if($post['title'] == "B&W Theme" || $post['title'] == "Funky Theme") { ?>
                       
-                    <a href="../../pages/faces.php?item=<?php echo $post['item']; ?>" target="_self" class="d-flex flex-row flex-wrap align-items-center mt-0 mb-2 col-12  bg-info nav-link text-light border border-dark align-self-stretch" title="<?php echo $post['title'] ?>">
-                        <h2 class="text-uppercase col-6 order-2"><?php echo $post['title'] ?></h2>
-                        <figure class="no-gap col-6 order-1">
-                            <img src="../../images/<?php echo $post['face']; ?>" alt="<?php $post['title']; ?>" title="<?php echo $post['title']; ?>" class="img-fluid" />
+                    <a href="../../pages/faces.php?item=<?php echo $post['item']; ?>" target="_self" class="d-flex flex-row flex-wrap  align-items-start mt-0 mb-2 col-12  bg-info nav-link text-light border border-dark align-self-stretch" title="<?php echo $post['title'] ?>">
+                        <h2 class="text-uppercase col-lg-12 align-self-start order-1"><?php echo $post['title'] ?></h2>
+                        <figure class="no-gap col-lg-6 order-2">
+                            <img src="../../images/<?php echo $post['face']; ?>" alt="<?php $post['title']; ?>" title="<?php echo $post['title']; ?>" class="img-fluid border border-dark" />
                         </figure>
-                        <p class="col-6 order-3">
+                        <p class="col-lg-6 order-3 align-self-start">
                             <?php echo $post['text']; ?>
                         </p>
                     </a>
@@ -141,16 +141,16 @@
               <?php
                    } elseif($post['title'] == "Squared Theme") { ?>
                 
-                    <a href="./faces.php" target="_self" class="d-flex flex-row flex-wrap align-items-center mt-0 mb-2 col-12  bg-info nav-link text-light border border-dark align-self-stretch" title="<?php echo $post['title'] ?>">
-                        <h2 class="text-uppercase col-6 order-2"><?php echo $post['title'] ?></h2>
-                        <figure class="no-gap col-6 order-1">
-                            <img src="../../images/<?php echo $post['face']; ?>" alt="<?php $post['title']; ?>" title="<?php echo $post['title']; ?>" class="img-fluid" />
+                    <a href="./faces.php" target="_self" class="d-flex flex-row flex-wrap  align-items-start mt-0 mb-2 col-12  bg-info nav-link text-light border border-dark align-self-stretch" title="<?php echo $post['title'] ?>">
+                        <h2 class="text-uppercase col-lg-12 align-self-start order-1"><?php echo $post['title'] ?></h2>
+                        <figure class="no-gap col-lg-6 order-2">
+                            <img src="../../images/<?php echo $post['face']; ?>" alt="<?php $post['title']; ?>" title="<?php echo $post['title']; ?>" class="img-fluid border border-dark" />
                         </figure>
-                        <p class="col-6 order-3">
+                        <p class="col-lg-6 order-3 align-self-start">
                             <?php echo $post['text']; ?>
                         </p>
                     </a>
-                </article>
+                
                 <?php
                    }
                }
