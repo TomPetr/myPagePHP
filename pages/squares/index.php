@@ -137,7 +137,7 @@
                     </figure>
                 </a>
                 <!-- Thumb #2-->
-                <a href="../../pages/apps.php" class="d-flex justify-content-around align-items-center mt-0 mb-2 col-12 flex-md-column col-md-4 bg-warning nav-link
+                <a href="./apps.php" class="d-flex justify-content-around align-items-center mt-0 mb-2 col-12 flex-md-column col-md-4 bg-warning nav-link
                     text-light flex-shrink-1 border border-dark" title="apps page">
                     <figure>
                         <img src="../../images/apps.png" alt="Apps" class="column-button filtered" />
@@ -146,7 +146,7 @@
                     <i class="fas fa-cogs fa-7x order-1 fa-border"></i>
                 </a>
                 <!-- Thumb #3-->
-                <a href="../../pages/faces.php"
+                <a href="./faces.php"
                     class="d-flex justify-content-around align-items-center mt-0 mb-2 col-12 flex-md-column col-md-4 bg-info nav-link text-light flex-shrink-1 border border-dark"
                     title="faces page">
                     <h2 class="text-uppercase">faces</h2>
