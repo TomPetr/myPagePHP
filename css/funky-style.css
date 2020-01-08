@@ -291,17 +291,13 @@ textarea.req-field {
 
 #footer-tools>li {
     width: 50%;
-    display: block;
     float: left;
-    margin-bottom: 1rem;
-}
-
-#footer-tools a {
-    text-decoration: none;
+    margin-bottom: 1rem; 
     color: aliceblue;
     font-size: 130%;
     text-align: center;
 }
+
 
 #footer-tools img {
     width: 64px;
