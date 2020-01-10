@@ -1,3 +1,5 @@
+
+
 <footer id="footer-section" class="clearfix">
         <!-- Left Column -->
         <div id="footer-left">
@@ -54,60 +56,19 @@
             <div id="credentials">
                 <h2>My tools</h2>
                 <ul id="footer-tools">
-                    <li>
-                        <a class="" href="#">
-                            <p>PHP</p>
-                            <p><img src="../images/php-icon.png" alt="php" /></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p>JavaScript</p>
-                            <p><img src="../images/js-icon.png" alt="javascript" /></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p>MySQL</p>
-                            <p><img src="../images/mysql-icon.png" alt="mySql" /></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p>BootStrap</p>
-                            <p><img src="../images/bootstrap-icon.png" alt="BootStrap" /></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p>VS Code</p>
-                            <p>
-                                <img src="../images/vcode-icon.png" alt="Visual Studio Code" />
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p>GitHub</p>
-                            <p><img src="../images/git_hub-icon.png" alt="GitHub" /></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p>AffinityPhoto</p>
-                            <p>
-                                <img src="../images/affinity_photo-icon.png" alt="AffinityPhoto" />
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p>AffinityDesigner</p>
-                            <p>
-                                <img src="../images/affinity_designer-icon.png" alt="AffinityDesigner" />
-                            </p>
-                        </a>
-                    </li>
+                    <?php include('../data/tools.php'); ?>
+                    <?php
+                      function myToolls($myTools) {
+                        foreach($myTools as $tool => $item) { ?>
+                           <li>
+                              <p><?php echo $tool; ?></p>
+                              <p><img src="../images/<?php echo $item['slug']; ?>"  alt="<?php echo $tool; ?>" /></p>
+                           </li>
+                     <?php
+                         }
+                       }
+                     ?>
+             <?php myToolls($myTools); ?>
                 </ul>
             </div>
             <div id="copyright">Copyright © <span id="year"></span> Tomas Petr</div>

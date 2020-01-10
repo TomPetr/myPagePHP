@@ -1,3 +1,5 @@
+<?php include('../../data/tools.php'); ?>
+<?php include('../../scripts/functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -190,7 +192,7 @@ Main Content Sections
                 <h2>My tools</h2>
                 <ul id="footer-tools">
                     
-                    <li>
+                    <!-- <li>
                         
                             <p>PHP</p>
                             <p><img src="../../images/php-icon.png" alt="php" /></p>
@@ -241,7 +243,8 @@ Main Content Sections
                                 <img src="../../images/affinity_designer-icon.png" alt="AffinityDesigner" />
                             </p>
                         
-                    </li>
+                    </li> -->
+                    <?php myToolls($myTools); ?>
                 </ul>
             </div>
             <div id="copyright">Copyright © <span id="year"></span> Tomas Petr</div>

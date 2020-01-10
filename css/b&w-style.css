@@ -461,31 +461,12 @@ textarea {
 }
 
 /* Credentials */
-#footer-tools li a img {
+#footer-tools li img {
     width: 64px;
     height: auto;
 
 }
 
-#footer-tools a:link {
-    text-decoration: none;
-    color: var(--absolut-black)
-}
-
-#footer-tools a:visited {
-    text-decoration: none;
-    color: var(--medium-grey);
-}
-
-#footer-tools a:hover {
-    text-decoration: none;
-    letter-spacing: 0.1rem;
-
-}
-
-#footer-tools a:active {
-    text-decoration: none;
-}
 
 #footer-tools {
     justify-content: center;
