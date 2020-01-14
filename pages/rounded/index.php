@@ -10,10 +10,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- description -->
   <title>Tomas Petr | Web of Creativity- Home</title>
-
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
   <!-- stylesheets -->
         <!-- #1 -->
-  <link rel="stylesheet" href="../../css/funky-style.css" />
+  <!-- <link rel="stylesheet" href="../../css/funky-style.css" /> -->
+  <style>
+    header{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr); 
+      grid-template-rows: 40px 40px auto;
+      width: 100%;
+    }
+    #brand-logo-frame{
+      grid-column: 2 / 11;
+      grid-row: 1/2;
+    }
+    #brand-logo-frame>img{
+      width: 100%;
+      height: auto;
+    }
+    #nav-main{
+      grid-column: 2/4;
+      grid-row: 3/5;
+    }
+#brand-face-frame{
+  grid-column:8/11;
+  grid-row:3/5;
+}
+    #nav-main-menu {
+      display: none;
+    }
+    #brand-face-frame>img{
+width:100%;
+height: auto;
+    }
+  </style>
         <!-- #2 -->
   <link rel="stylesheet" href="" />
   <!-- favicon -->
@@ -32,35 +65,60 @@
         ===============
         -->
     
-<header class="clearfix">
-    <!-- header -->
-            <!-- Top Navigation  -->
-            <nav id="nav-main" class="clearfix">
-                <ul id="nav-main-menu">
-            <li><a href="index.php?item=funky">home</a></li>
-        
-           <li><a href="codes.php?item=funky">codes</a></li>
-        
-           <li><a href="apps.php?item=funky">apps</a></li>
-        
-           <li><a href="faces.php?item=funky">faces</a></li>
-        
-   
+    <header class="clearfix">
     
-    
-</ul>
-            </nav>
-
             <!-- Logo -->
-
             <a id="brand-logo-frame" class="clearfix" href="../../index.php">
                 <img src="../../images/logo.png" alt="logo" id="brand-logo-img" />
             </a>
+            <!-- Top Navigation  -->
+            <nav id="nav-main" class="clearfix">
+                <i id="bars" class="fas fa-bars"></i>
+                <ul id="nav-main-menu">
+                   <li><a href="index.php?item=funky">home</a></li>
+        
+                   <li><a href="codes.php?item=funky">codes</a></li>
+        
+                   <li><a href="apps.php?item=funky">apps</a></li>
+        
+                   <li><a href="faces.php?item=funky">faces</a></li>
+                </ul>
+            </nav>
+
+            
 
             <!-- Brand img -->
             <figure id="brand-face-frame">
                 <img src="../../images/my_photo.jpg" id="brand-face-img" alt="My Photo" />
             </figure>
+            <!--   
+         ===============
+         Page Intro Sections
+         ===============
+         -->
+
+            <section id="page-intro">
+      <!-- Page Title -->
+      <div id="intro-title" class="clearfix">
+        <h1>Tomas' Web of Creativity</h1>
+      </div>
+      <!-- intro paragraphs -->
+      <div id="intro-content" class="clearfix">
+        <!-- intro paragraph #1 -->
+        <p>
+          Hello, my name is Tomas Petr. My interests include web app
+          development, photography, creating Photoshop fantasies, and
+          observing human behavior to better understand people. I strive
+          to describe such behaviors in the short stories I write.        </p>
+        <!-- intro paragraph #2 -->
+        <p>
+          I live in Salt Lake City now. Prior to migrating to the U.S.
+          from my native Czech Republic, I studied mechanical engineering.
+          I’m currently studying web development at Salt Lake Community
+          College. I want to learn how to build modern Websites using
+          HTLM5, CSS, and JavaScript.        </p>
+      </div>
+           </section>
         </header>   
     <!-- *** HOME PAGE CONTENT *** -->
 
@@ -93,7 +151,7 @@
           College. I want to learn how to build modern Websites using
           HTLM5, CSS, and JavaScript.        </p>
       </div>
-    </section>
+</section>
         <!-- 
 ===============
 Main Content Sections
@@ -192,58 +250,7 @@ Main Content Sections
                 <h2>My tools</h2>
                 <ul id="footer-tools">
                     
-                    <!-- <li>
-                        
-                            <p>PHP</p>
-                            <p><img src="../../images/php-icon.png" alt="php" /></p>
-                        
-                    </li>
-                    <li>
-                        
-                            <p>JavaScript</p>
-                            <p><img src="../../images/js-icon.png" alt="javascript" /></p>
-                        
-                    </li>
-                    <li>
-                        
-                            <p>MySQL</p>
-                            <p><img src="../../images/mysql-icon.png" alt="mySql" /></p>
-                        
-                    </li>
-                    <li>
-                        
-                            <p>BootStrap</p>
-                            <p><img src="../../images/bootstrap-icon.png" alt="BootStrap" /></p>
-                        
-                    </li>
-                    <li>
-                        
-                            <p>VS Code</p>
-                            <p>
-                                <img src="../../images/vcode-icon.png" alt="Visual Studio Code" />
-                            </p>
-                        
-                    </li>
-                    <li>
-                        
-                            <p>GitHub</p>
-                            <p><img src="../../images/git_hub-icon.png" alt="GitHub" /></p>
-                        
-                    </li>
-                    <li>
-                            <p>AffinityPhoto</p>
-                            <p>
-                                <img src="../../images/affinity_photo-icon.png" alt="AffinityPhoto" />
-                            </p>
-                                            </li>
-                    <li>
-                        
-                            <p>AffinityDesigner</p>
-                            <p>
-                                <img src="../../images/affinity_designer-icon.png" alt="AffinityDesigner" />
-                            </p>
-                        
-                    </li> -->
+                    
                     <?php myToolls($myTools); ?>
                 </ul>
             </div>
