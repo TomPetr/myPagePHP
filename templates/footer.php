@@ -1,10 +1,27 @@
-
+<?php
+$first_Name = $last_Name = $email = $phone = $subject = $message = $com = $news = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $first_Name = test_input($_POST["first-name"]);
+    $last_Name = test_input($_POST["last-name"]);
+}
+function secure_input($data) {
+   
+    
+   return $data =  htmlspecialchars(stripslashes(trim($data)));
+   //   the same as:
+    // $data = trim($data);
+    // $data = stripslashes($data);
+    // $data = htmlspecialchars($data);
+  
+    // return $data;
+  }
+?>
 
 <footer id="footer-section" class="clearfix">
         <!-- Left Column -->
         <div id="footer-left">
             <h2>Contact</h2>
-            <form action="/action_page.php" method="POST" target="_self" name="contact-form" id="contact-form"
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" target="_self" name="contact-form" id="contact-form"
                 width="100%" onsubmit="validateFormFx(event)">
                 <fieldset>
                     <legend>Hire Me!</legend>
