@@ -3,6 +3,8 @@ $first_Name = $last_Name = $email = $phone = $subject = $message = $com = $news 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_Name = test_input($_POST["first-name"]);
     $last_Name = test_input($_POST["last-name"]);
+    
+
 }
 function secure_input($data) {
    

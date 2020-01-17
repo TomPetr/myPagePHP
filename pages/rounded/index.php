@@ -35,8 +35,8 @@
       grid-column: 2/4;
       grid-row: 3/5;
     }
-#brand-face-frame{
-  grid-column:8/11;
+   #brand-face-frame{
+    grid-column:8/11;
   grid-row:3/5;
 }
     #nav-main-menu {
