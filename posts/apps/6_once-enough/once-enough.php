@@ -38,7 +38,7 @@
         <section id="page-intro">
             <!-- Page Title -->
             <div id="intro-title" class="clearfix">
-                <h1>Once is Enough</h1>
+                <h1>Contact Form</h1>
                 <h2>Prevent a Form from Resubmitting </h2>
             </div>
     </div>
@@ -55,15 +55,12 @@ Main Content Sections
         <!-- Page's nav thumbs-->
         <section id="post">
             <p>
-                I decided to design my demo Contact Form in the minimalistic way. The simple UI, but functioning. I left
-                aside the labels telling the user what to fill in, instead I let the visual design to navigate them
-                through. So
-                here is the Contact Form:
+                Contact Form.
             </p>
 
             <section id="app">
 
-                <form action="./redirect.php" method="POST" target="_self" name="my-form" id="my-form" width="100%"
+                <form action="./redirect_1.php" method="POST" target="_self" name="my-form" id="my-form" width="100%"
                     onsubmit="validateFormFx(event)">
                     <fieldset>
                         <legend>Hire Me!</legend>
@@ -114,82 +111,11 @@ Main Content Sections
 
 
             </section>
-            <p>The task is to validate the form, if all required input fields we filled in, before it is submited to the
-                server. It's achieved in two steps, represented by two groups of code: <br />
-                1) grabbing all form's input elements which are rquired to be filled in (not all input fields are
-                required). <br />
-                2) upon submiting the form, a function validates the form if all required fields are filled in plus
-                handles the CSS decoration depending on fields's status, if they are filled in or not.</p>
-            <p>Looking at the first group of code, it starts with declaring a variable <mark>allElements</mark>
-                which holds the collection of all form's elements. Since not all elements are either input or
-                required elements, I needed to filter out any element which isn't required to be filled in by an
-                user. I used JavaScript Array <mark>filter()</mark> method to do so. But before I could do it,
-                <mark>allElements</mark>
-                collection had to be converted into an array since <mark>filter()</mark> method works only
-                on arrays,
-                not on
-                <mark>HTMLFormControlsCollection</mark>. Now all form's elements are stored in <mark>allElArray</mark>
-                array
-                variable.
-                Let's see what kind of data this array contains:
-            </p>
-            <article class="snippet">
-                <img src="./snippets/allElArray.png" alt="">
-            </article>
-
-            <p>What we can see here is an object array with 11 objects in it. Each object represents an element of
-                <mark>my-form</mark> contact form. The elements, to witch I gave the CSS <mark>class="req"</mark> in my
-                HTML, are
-                these ones what
-                are required to be filled in. Having a closer look at one of them, we can see what kind of information
-                such
-                element object contains:
-            </p>
-            <article class="snippet">
-                <img src="./snippets/req.png" alt="">
-            </article>
-            <p>This object hold a lot of information. The one which will help to identify the required input field is
-                sitting at the bottom of code snipped above, the <mark>classList</mark> property. It's the collection
-                of all CSS
-                classes associated with this HTML element.</p>
-            <p>Now knowing all of it, with the help of Array <mark>filter()</mark> method, I could obtain new array,
-                <mark>reqElements</mark>,
-                which contains only these form's input fields which are required to be filled in.
-            </p>
-            <article class="snippet">
-                <script src="https://gist.github.com/TomPetr/c5fdb998966bc3620553ceb59c8e3e23.js"></script>
-            </article>
-            <p>Inside of <mark>filter()</mark> method, each object element of <mark>allElArray</mark> array, is tested
-                for presence
-                of <mark>req</mark> CSS
-                class. This can be accessed via <mark>reqEl["classList"]</mark> where <mark>reqEl</mark> represents an
-                indidual input field object. If a <mark>req</mark> class is presented, the tested element is added to an
-                array <mark>reqElements</mark> which is now only holding
-                required
-                input fields. The code
-                knows at this point what
-                input fields needs to be validated for user input.
-                <p>It will be handled by the
-                    <mark>validateFormFx()</mark> function:</p>
-
+            
+          <!-- <p>The whole PHP code looks like this:</p>
                 <article class="snippet">
-                    <script src=" https://gist.github.com/TomPetr/b1eb251943eb34fdd00c8d208ef1f179.js"> </script>
-                </article>
-                <p>Its code is simple. If an input's field was left empty, when <mark>(el['value'] == "")</mark> is
-                    true,
-                    the specific
-                    set of CSS
-                    decoration will be applied to such HTML element and the element's label. And also, the page will be
-                    prevented from being reloaded (the user doesn't lose all already filled information), and prevented
-                    from being submitted.
-                    In the case all required input fields are filled in, the form is submited to a server.
-                </p>
-
-
-                <p>The whole JavaScript code looks like this:</p>
-                <article class="snippet">
-                    <script src="https://gist.github.com/TomPetr/23a2fbee887b9281a92d38490358e473.js"></script>
-                </article>
+                    <script src="https://gist.github.com/TomPetr/edec21d0741e934005dc7a9f5d9c8f26.js"></script>
+                </article> -->
 
         </section>
     </main>
