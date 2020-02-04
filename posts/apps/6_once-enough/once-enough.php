@@ -71,7 +71,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "<p style='color: red; font-size: 1.5rem'>Hello ".$row["firstname"].". Thank you for contacting me. I received your message:<br><b>".$row["msg"]."</b><br>I'll get ahold of you shortly.</p>";
+        echo "<p style='color: red; font-size: 1.5rem'>Hello ".$row["firstname"].". Thank you for contacting me. I received your message:<br><b><em>\"".$row["msg"]."\"</b></em><br>I'll get ahold of you shortly.</p>";
     }
 } else {
     echo "0 results";
