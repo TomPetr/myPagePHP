@@ -34,6 +34,16 @@ $appsPosts = array(
         "img"        => "js-icon.png",
 
     ),
+    array(
+        "slug" => "6_once-enough/once-enough.php", 
+        "title" => "Once is Enough",
+        "text"  => "One popular way among the web developers is to send the form-dada for processing to the same page these dada originated from. As it had some nice benefits, the visitor has a feeling they never left the page, it also comes with one huge disadvantage. If the user reloads the page, after the form is sumbmited, the original data will get re-submited and we get the duplicated data. Of course we don't want that, once is enough.",
+        "date"       => "January 28, 2020",
+        "categories" => "PHP",
+        "img"        => "php-icon.png",
+
+    ),
+
 
 
 )

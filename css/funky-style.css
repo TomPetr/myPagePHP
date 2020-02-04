@@ -292,7 +292,7 @@ textarea.req-field {
 #footer-tools>li {
     width: 50%;
     float: left;
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
     color: aliceblue;
     font-size: 130%;
     text-align: center;
@@ -524,8 +524,9 @@ textarea.req-field {
 #posts>article {
 
     height: auto;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    background-color: #FAFBEF;
+    background-color: #c2c9c9;
 }
 
 

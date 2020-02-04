@@ -35,20 +35,42 @@ $firstname = $conn->real_escape_string($_POST['first-name']);
 $lastname = $conn->real_escape_string($_POST['last-name']);
 $email= $conn->real_escape_string($_POST['email']);
 $subj= $conn->real_escape_string($_POST['subj']);
-$msg = $conn->real_escape_string($_POST['msg']);
+$msg = $conn->real_escape_string($_POST['message']);
 $news= $conn->real_escape_string($_POST['news']);
 
-$sql="INSERT INTO tp_MyGuests (firstname, lastname, email, subj, msg, news) VALUES ($firstname, $lastname, $email, $subj, $msg, $news)";
+$sql="INSERT INTO tp_MyGuests (firstname, lastname, email, subj, msg, news) VALUES ('$firstname', '$lastname', '$email', '$subj', '$msg', '$news')";
 if(!$result = $conn->query($sql)){
 die('There was an error running the query [' . $conn->error . ']');
 }
 else
 {
-echo "Thank you! We will contact you soon";
- //  And  redirect the form from "redirect.php" back to the original page   
-    // $previous = htmlspecialchars($_SERVER['HTTP_REFERER'])."?status=\"submited\"";
+//   $sql = "SELECT id, firstname, lastname FROM tp_MyGuests";
+// $result = mysqli_query($conn, $sql);
 
-    // header("Location:$previous");
+// if (mysqli_num_rows($result) > 0) {
+//     // output data of each row
+//     while($row = mysqli_fetch_assoc($result)) {
+//         echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+//     }
+// } else {
+//     echo "0 results";
+// }
+
+$sql = "SELECT id  FROM tp_MyGuests WHERE lastname='$lastname' AND msg='$msg'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        $currentID = $row["id"];
+    }
+} else {
+    echo "0 results";
+}
+// echo "Thank you! We will contact you soon";
+  // And  redirect the form from "redirect.php" back to the original page   
+    $previous = htmlspecialchars($_SERVER['HTTP_REFERER'])."?id=$currentID";
+
+  header("Location:$previous");
 }
 
  } else{ ?>

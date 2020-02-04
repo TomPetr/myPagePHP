@@ -50,6 +50,8 @@
 Main Content Sections
 ===============
 -->
+<?php  // create table
+require_once("config.php"); ?>
 
     <main id="main-content-wrapper">
         <!-- Page's nav thumbs-->
@@ -60,7 +62,24 @@ Main Content Sections
 
             <section id="app">
 
-                <form action="./redirect_1.php" method="POST" target="_self" name="my-form" id="my-form" width="100%"
+            <?php 
+            if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $sql = "SELECT * FROM tp_MyGuests WHERE  id = '$id'";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "<p style='color: red; font-size: 1.5rem'>Hello ".$row["firstname"].". Thank you for contacting me. I received your message:<br><b>".$row["msg"]."</b><br>I'll get ahold of you shortly.</p>";
+    }
+} else {
+    echo "0 results";
+}
+            
+            } else  { ?>
+
+<form action="./redirect_1.php" method="POST" target="_self" name="my-form" id="my-form" width="100%"
                     onsubmit="validateFormFx(event)">
                     <fieldset>
                         <legend>Hire Me!</legend>
@@ -108,6 +127,13 @@ Main Content Sections
                         <input type="submit" name="submit-form" id="submit" value="Submit!" />
                     </fieldset>
                 </form>
+
+
+          <?php 
+
+            } ?>
+
+                
 
 
             </section>
