@@ -18,7 +18,8 @@ $headers = 'From: webmaster@example.com' . "\r\n" .
 
 mail($to, $subject, $message, $headers);
 
-header("Location:$previous");
+// header("Location:$previous");
+echo "Thank you for contacting us!";
 
 
 

@@ -1,4 +1,7 @@
-
+<?php 
+$uri = $_SERVER['REQUEST_URI'];
+ // gets URI
+?>
 <header class="clearfix">
     <!-- header -->
             <!-- Top Navigation  -->
@@ -24,6 +27,20 @@
 
             <!-- Brand img -->
             <figure id="brand-face-frame">
-                <img src="../images/my_photo.jpg" id="brand-face-img" alt="My Photo" />
+            <?php 
+             if(strpos($uri, "index")){
+                 $brandImg = "my_photo.jpg";
+             }
+             if(strpos($uri, "codes")){
+                $brandImg = "codes_brand.jpg";
+            }
+            if(strpos($uri, "apps")){
+                $brandImg = "apps_brand.jpg";
+            }
+            if(strpos($uri, "faces")){
+                $brandImg = "faces_brand.jpg";
+            }
+            ?>
+                <img src="../images/<?php echo $brandImg; ?>" id="brand-face-img" alt="My Photo" />
             </figure>
         </header>
