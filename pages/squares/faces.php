@@ -55,7 +55,7 @@
                 class="col-12 d-flex navbar navbar-expand-md navbar-dark justify-content-between p-0 order-md-1">
                 <!-- Brand img -->
                 <a class="navbar-brand col-6 col-md-3 m-0 p-0" href="./index.php"><img
-                        src="../../images/my_photo.jpg" id="brand-face-img" class="filtered img-fluid"
+                        src="../../images/faces_brand.jpg" id="brand-face-img" class="filtered img-fluid"
                         alt="My Photo" /></a>
                 <button class="navbar-toggler mr-2 col-5" type="button" data-toggle="collapse"
                     data-target="#collapsibleNavbar">
